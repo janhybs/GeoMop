@@ -1,0 +1,11 @@
+ModelEditor
+===========
+
+.. toctree::
+   :maxdepth: 4
+
+   data
+   dialogs
+   helpers
+   model_editor
+   panels

@@ -1,0 +1,9 @@
+lib
+===
+
+.. toctree::
+   :maxdepth: 4
+
+   config
+   geomop_dialogs
+   icon

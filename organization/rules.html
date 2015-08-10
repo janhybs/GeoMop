@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>GeoMop Development Rules (czech) &mdash; GeoMop Source Documentation 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="GeoMop Source Documentation 0.0.1 documentation" href="../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../index.html">GeoMop Source Documentation 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="geomop-development-rules-czech">
+<h1>GeoMop Development Rules (czech)<a class="headerlink" href="#geomop-development-rules-czech" title="Permalink to this headline">¶</a></h1>
+<p>Vývoj aplikace GeoMop podléhá následujícím pravidlům.</p>
+</div>
+<div class="section" id="psani-kodu">
+<h1>Psaní kódu<a class="headerlink" href="#psani-kodu" title="Permalink to this headline">¶</a></h1>
+<p>Nejdůležitějším pravidlem pro tuto aplikaci je psát <strong>jednoduchý</strong>, ve všem co
+má dělat protestovaný kód jež dělá jen a pouze to co má.</p>
+<dl class="docutils">
+<dt>Poznámka:</dt>
+<dd>Pokud bude mít někdo dojem, že to jde udělat se skoro stejným usilím a vyprodukovat
+univerzální kód, který půjde využít jinde, nebo později, může to zkusit. Podmínkou však
+je, že tento kód bude ve všech větvých otestovaný. Z mé zkušenosti však
+takovýto kód bude po nějaké změně požadavků, optimalizaci, nebo opravách změněn,
+bude do něj problematické přidat požaduvané vlastnosti a zachovat obsaženou univerzálnost.
+A to už vůbec nemluvým o případu, kdy i novou vlastnost přidáváme v duchu univerzálnosti
+jako tu předchozí. Důsledné otestování se stane velkou komplikací, popisek nad funkcí
+či třídou začne narůstat do závratné velikosti a všichni se budou bát do kódu šáhnout.
+Takže pokud tu budou náznaky že tato situace nastává, musí okamžitě dojít k zjednodušení
+(přepsání) kódu a k úplnému otestování.</dd>
+</dl>
+<p>Kód připravený pro použitý v budoucnosti je lépe nechat nedopsaný a v místě
+budoucího kódu vyvolat vyjímku:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">raise</span> <span class="ne">NotImplementedError</span>
+</pre></div>
+</div>
+<p>Aplikace musí být vždy v konzistentním stavu. Je lepší pokud aplikace spadne,
+než když zůstane nekonzistentní. Zvlášt nebezpečný je kód, kdy aplikace
+snaží spravovat samu sebe a opravý jen část stavových proměnných. Kde není
+pád applikace možný, je nutný zalogovat problém a vymyslet nějakou formu
+částečného, nebo úplný restart. Pro pád applikace je možné využít vyjímky.</p>
+<p>Přednostně se použijí knihovny používané již jinou částí aplikace. Přidání nové
+knihovny, mimo té jež se považuje za standartní součást pythonu musí předcházet
+důkladné rozvážení. Pokud by úspora času získanám přidání knihovny byla malá,
+je doporučené psát vlastní kód.</p>
+<p>Knihovny třetích stran jsou umístěny ve zvláštním adresáři. K jejich úpravě se vždy
+používá nějaká mezivrstva umístěná vně knihoven, například třída jež je obalí. Pokud
+to není možné a upravuje se kód knohovny, je to velký problém a takovýto postup musí
+být schválen vedoucím projektu.</p>
+</div>
+<div class="section" id="kontrola-kodu">
+<h1>Kontrola kódu<a class="headerlink" href="#kontrola-kodu" title="Permalink to this headline">¶</a></h1>
+<p>Před commitem kódu na server je nutné provéct kontrolu pyLintem. Pokud bude nalezena
+chyba, kterou nelze okamžitě vyřešit opravou, nebo v souladu s <a class="reference internal" href="pylint_rules.html"><em>doporučeným řešením</em></a>, předá se vedoucímu projektu.</p>
+</div>
+<div class="section" id="testovani-kodu">
+<h1>Testování kódu<a class="headerlink" href="#testovani-kodu" title="Permalink to this headline">¶</a></h1>
+<p>Před commitem kódu na server je nutné kontrolovat kód již <a class="reference internal" href="procedures.html"><em>vytvořenými
+automatickými testy</em></a>. Pokud by toto bylo v budoucnu časově náročné,
+napíší se skripty pouštící pouze vlastní modul, nebo jeho část.</p>
+<p>Před uzavřením úkolu musí být vytvořeny i automatické testy v souladu s doporučeným
+postupen</p>
+</div>
+<div class="section" id="uchovavani-kodu">
+<h1>Uchovávání kódu<a class="headerlink" href="#uchovavani-kodu" title="Permalink to this headline">¶</a></h1>
+<p>Používá se git na adrese:</p>
+<div class="highlight-python"><div class="highlight"><pre>https://github.com/GeoMop/GeoMop
+</pre></div>
+</div>
+<p>Commituje se jen funkční kód.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">GeoMop Development Rules (czech)</a></li>
+<li><a class="reference internal" href="#psani-kodu">Psaní kódu</a></li>
+<li><a class="reference internal" href="#kontrola-kodu">Kontrola kódu</a></li>
+<li><a class="reference internal" href="#testovani-kodu">Testování kódu</a></li>
+<li><a class="reference internal" href="#uchovavani-kodu">Uchovávání kódu</a></li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/organization/rules.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../index.html">GeoMop Source Documentation 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, TUL.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

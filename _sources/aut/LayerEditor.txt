@@ -1,0 +1,11 @@
+LayerEditor
+===========
+
+.. toctree::
+   :maxdepth: 4
+
+   data
+   dialogs
+   drawing
+   layer_editor
+   panels

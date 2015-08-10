@@ -1,0 +1,22 @@
+drawing package
+===============
+
+Submodules
+----------
+
+drawing.draw_lib module
+-----------------------
+
+.. automodule:: drawing.draw_lib
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: drawing
+    :members:
+    :undoc-members:
+    :show-inheritance:

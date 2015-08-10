@@ -1,0 +1,7 @@
+geometry_dialog module
+======================
+
+.. automodule:: geometry_dialog
+    :members:
+    :undoc-members:
+    :show-inheritance:

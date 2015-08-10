@@ -1,0 +1,38 @@
+data.validation package
+=======================
+
+Submodules
+----------
+
+data.validation.checks module
+-----------------------------
+
+.. automodule:: data.validation.checks
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+data.validation.errors module
+-----------------------------
+
+.. automodule:: data.validation.errors
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+data.validation.validator module
+--------------------------------
+
+.. automodule:: data.validation.validator
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: data.validation
+    :members:
+    :undoc-members:
+    :show-inheritance:

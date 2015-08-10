@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>GeoMop Development Procedures (czech) &mdash; GeoMop Source Documentation 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="GeoMop Source Documentation 0.0.1 documentation" href="../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../index.html">GeoMop Source Documentation 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="geomop-development-procedures-czech">
+<h1>GeoMop Development Procedures (czech)<a class="headerlink" href="#geomop-development-procedures-czech" title="Permalink to this headline">¶</a></h1>
+<p>Tento dokument popisuje postupy používané pri vývoji aplikace</p>
+</div>
+<div class="section" id="adresarova-struktura">
+<h1>Adresářová struktura<a class="headerlink" href="#adresarova-struktura" title="Permalink to this headline">¶</a></h1>
+<p>Adresářová struktura
+je:</p>
+<div class="highlight-python"><div class="highlight"><pre>doc
+      src
+src
+      LayerEditor
+      lib
+testing
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>Popis:</dt>
+<dd><ul class="first last simple">
+<li>doc/src - vývojářská dokumentace</li>
+<li>src/LayerEditor - Modul pro zobrazení a úpravu vrstev</li>
+<li>src/lib - Modul s knihovnami používanými ostatními moduly</li>
+<li>testing - Automatické testy</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="kontrola-kodu">
+<h1>Kontrola kódu<a class="headerlink" href="#kontrola-kodu" title="Permalink to this headline">¶</a></h1>
+<p>Pro kontrolu se používá <a class="reference external" href="www.pylint.org">pyLint</a>. V hlavním adresáři každého
+modulu je soubor pylintrc, v kterém se píší pravidla pro vyjímky. Další vyjímky
+je možné napsat na začátek souboru, nebo nad vyjmutý řádek. Pravidla pro tyto
+vyjímky budou vznikat během vývoje a budou zapisovány do <a class="reference internal" href="pylint_rules.html"><em>samostatného souboru</em></a>.</p>
+<p>Bohužel s kontrolou kódu nemám zkušenosti a některé požadavky vyplynou až během
+vývoje. Proto zde popíši oblasti, na které by jsem se chtěl při kontrole kódu
+zaměřit a to co nekontrolovat vyplyne z porovnání poměru režie/přínos. To co
+nebude odpovídat mé představě o programování vyřadím. Bohužel zatím mám spíše
+dojem, že to nabízenými nástroji nedokáži udělat dostatečně adresně, aby zůstalo
+zachováno i co se mi líbí. Přehled pylintem kontrolovaných oblastí (lze použít
+pro vypnutí testu) je <a class="reference external" href="http://docs.pylint.org/features.html">zde</a>.</p>
+<p><strong>Odsazení</strong></p>
+<p>V Pythonu asi nezbytnost.</p>
+<p><strong>prázné znaky na konci řádků</strong></p>
+<dl class="docutils">
+<dt>Je to dost otrava</dt>
+<dd><ul class="first last simple">
+<li><em>zjistit zda to může něčemu vadit</em></li>
+<li><em>zjistit zda to něco neumí udělat automaticky</em></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Pravidla psaní kódu</strong></p>
+<p>Jednotná pravidla psaní kódu jsou hezká a asi i něco zvýší přehlednost kódu.
+Sice to není nijak zvlášt důležité, ale předpokládám že po několika kontrolách
+pylintem přejdou do krve a nebudou moc zdržovat.</p>
+<p>Pylint používá konvenci <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP 0008</a></p>
+<p><strong>Konvence pojmenování souborů, tříd, proměnných ...</strong></p>
+<p>Pylint pro kontrolu názvů používá tuto
+<a class="reference external" href="http://pylint-messages.wikidot.com/messages:c0103">konvenci</a>. O tomto platí
+to samé jako o předcházejícím. Mě nedělá problém číst kód napsaný jakoukoliv
+konvencí, spíš jí mám problém udržet. Doufám že pomocí pylintu bude můj kód,
+co se týká jednotnosti pojmenování, konzistentní. Škoda že to neumí hledat
+české názvy.</p>
+<p><strong>Kontrola použití lokální proměnné (_xxx) jiného modulu</strong></p>
+<p>Python nemá žádnou přímou cestu jak schovat proměnnou. (Jedině jí dát do souboru
+který je schovaný pomocí __init__.py) Osobně si myslím že bez nějaký formy
+<tt class="docutils literal"><span class="pre">zapouzdření</span></tt> to větším projektu nejde. Proto bych poprosil o důsledné rozlišení
+a označování lokálních proměnných pomocí _. A doufám že chybu
+<tt class="docutils literal"><span class="pre">protected-access</span> <span class="pre">(W0212):</span> <span class="pre">Access</span> <span class="pre">to</span> <span class="pre">a</span> <span class="pre">protected</span> <span class="pre">member</span> <span class="pre">...</span></tt> nikde neuvidím.
+Jen kromě testů, kde je testování lokálních proměnných praktické.</p>
+<p><strong>Starý styl vytvoření třídy</strong></p>
+<dl class="docutils">
+<dt>super-on-old-class (E1002)</dt>
+<dd><ul class="first last simple">
+<li><em>s někým se poradit a zjistit co to dělá</em></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="vyvojarska-dokumentace">
+<h1>Vývojářska Dokumentace<a class="headerlink" href="#vyvojarska-dokumentace" title="Permalink to this headline">¶</a></h1>
+<p>Dokumentace je psaná v <a class="reference external" href="http://sphinx-doc.org/rest.html#paragraphs">reStructuredText</a>
+a do finální podoby generována pomocí <a class="reference external" href="http://sphinx-doc.org/index.htmls">sphinx</a>.
+<a class="reference external" href="http://sphinx-doc.org/rest.html#paragraphs">reStructuredText</a> je docstring formát a
+<a class="reference external" href="http://sphinx-doc.org/index.htmls">sphinx</a> pak umožnuje dodat pěkné formátování textu
+a vygenerovat požadovaný formát dokumentu. Generovat celou vývojářskou dokumentaci je možné
+z adresáře doc/src/ pomocí make a požadovaného formátu. Například:</p>
+<div class="highlight-python"><div class="highlight"><pre>make html
+</pre></div>
+</div>
+<p>Dokumentace se skládá z organizačních pokynů v adresáři doc/src/organization a z dokumentace
+zdrojových kódů. Ta je automaticky generována po jednotlivých GeoMop modulech pomocí sphinx modulu
+<a class="reference external" href="http://sphinx-doc.org/man/sphinx-apidoc.html">sphinx-apidoc</a> příkazem umístěným v Makefile:</p>
+<div class="highlight-python"><div class="highlight"><pre>modules.lib.rst:
+        sphinx-apidoc -o ./aut -s .rst ../../src/lib/
+        mv aut/modules.rst aut/lib.rst
+</pre></div>
+</div>
+<p>a začleněna do index.rst (odkaz na soubor aut/lib.rst)</p>
+<p><a class="reference external" href="http://sphinx-doc.org/index.htmls">sphinx</a> není úplně jednoduchý nástroj na osvojení a je
+primárně určený na psaní dokumentace obecně. Naopak jako nástroj pro generování dokumentace
+ze zdrojových kódů není ideální a má mnoho much. Ale alternativy již nejsou zrovna aktivně
+vyvíjený a <a class="reference external" href="http://sphinx-doc.org/index.htmls">sphinx</a> následně můžeme použít i na psaní
+uživatelské dokumentace.</p>
+</div>
+<div class="section" id="uzivatelska-dokumentace">
+<h1>Uživatelská Dokumentace<a class="headerlink" href="#uzivatelska-dokumentace" title="Permalink to this headline">¶</a></h1>
+<p>Dokumentace bude asi psaná v <a class="reference external" href="http://sphinx-doc.org/rest.html#paragraphs">reStructuredText</a> a
+do finální podoby generována pomocí <a class="reference external" href="http://sphinx-doc.org/index.htmls">sphinx</a>.</p>
+</div>
+<div class="section" id="testovani-kodu-po-sobe">
+<h1>Testování kódu po sobě<a class="headerlink" href="#testovani-kodu-po-sobe" title="Permalink to this headline">¶</a></h1>
+<p>Kód je nutné otestova kompletně a pokud víme že ovlivní i jiné části programu, pak i ty.
+Tam kde jsou psané kompletní testy stačí zběžně, v jiném případě by mělo být testování
+kompletnější.</p>
+</div>
+<div class="section" id="testovani-automaticke-testy">
+<h1>Testování - automatické testy<a class="headerlink" href="#testovani-automaticke-testy" title="Permalink to this headline">¶</a></h1>
+<p>Pro psaní automatických testů je použit <a class="reference external" href="http://pytest.org/latest/">pyTest</a>. Testy
+je možné lokálně spustit z testing adresáře příkazem:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">RunTests</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>UI testy qt částí aplikace je možné dělat pomocí qt knihovny
+<a class="reference external" href="http://doc.qt.io/qt-5/qtest.html">QTest</a> (Jen Qt dokumentace). Testování je popsáno
+<a class="reference external" href="http://johnnado.com/pyqt-qtest-example/">v tomto článku</a>.</p>
+<p>V budoucnu je třeba spouštět testy automaticky po každém poslání do gitu nejlépe na
+deployi ve virtuálním prostředí.</p>
+<dl class="docutils">
+<dt><strong>Co se musí aut. testovat</strong>:</dt>
+<dd><ul class="first last simple">
+<li>přítomnost souboru v prostředí (z každého souboru zavolat nějakou funkci)</li>
+<li>pokud je kód souboru závislý na nějakém resourci, knihově, nebo na něčem jiném, pak
+otestovat jejich přítomnost (zavolat část kódu, která danou závislost načte, nebo kde
+proběhne inicializace)</li>
+<li>pokud jde o qt třídu, která obsahuje signál, pak otestovat signál</li>
+</ul>
+</dd>
+<dt><strong>Co je dobré aut. testovat</strong>:</dt>
+<dd><ul class="first last simple">
+<li>Psaní automatických testů může být činnost, jež ušetří mnoho práce v budoucnosti,
+naopak muže být i velmi časově náročné a výsledek nevalný. Něco se testuje lépe a
+něco hůře. Na každém z nás je aby našel tu hranici, kde je to výhoddné.</li>
+<li>Některý kód vede na něco jako úplné testy. Například implementujeme-li něco, co se
+může během vývoje (přidávání nové vlastnosti) lehce rozbít. Přičemž lze relativně
+lehce otestovat, že se nezměnila již nainplementovaná část. Pokud tomu tak je,
+určitě se o takovýto test pokusit. Do popisu třídy se pak poznačí, že jsou k ní k
+dispozici úplné testy</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="pozadavky-na-vyvojovy-pc">
+<h1>Požadavky na vývojový PC<a class="headerlink" href="#pozadavky-na-vyvojovy-pc" title="Permalink to this headline">¶</a></h1>
+<p>Vše je psané pro Linux. Pokud by se mělo vyvíjet i na window, je nutné tam nainstalovat
+maketool a asi napsat nějaké alternativy k sh skriptům, ale ten je použit jen pro testy.
+Pokud by se našel někdo, kdo by chtěl vyvíjet na windows, je to v zásadě vítané, ale bude
+to znamenat vyřešit a zdokumentovat instalaci prostředí a přidání alternativních skriptů.</p>
+<dl class="docutils">
+<dt>Požadavky:</dt>
+<dd><ul class="first last simple">
+<li>Python3</li>
+<li>PyQt5</li>
+<li>PyTest</li>
+<li>PyLint</li>
+<li>Sphinx</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="ide">
+<h1>IDE<a class="headerlink" href="#ide" title="Permalink to this headline">¶</a></h1>
+<p>Je možné používat IDE dle uvážení. Projektové soubory se do Gitem neverzují. Každý je
+zodpovědný za to aby mu to fungovalo na jeho Počítači.</p>
+<dl class="docutils">
+<dt>Možnosti:</dt>
+<dd><ul class="first last simple">
+<li>Eclipse + <a class="reference external" href="http://pydev.org/manual_101_root.html">PyDev</a> - netestoval jsem, eclipse
+nemám rád</li>
+<li><a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a> - měl problémy s qt a nenašel jsem
+rychle přijatelné řešení , ale jinak docela dobré</li>
+<li><a class="reference external" href="https://www.jetbrains.com/pycharm/">Eric IDE</a> - není s ním úplně jednoduché začít
+vyvíjet, ale když si na něj člověk zvykne ... . Tento nástroj budu používat asi já,
+takže budu schopný poradit a asi v něm půjde i generovat z docstringů i bublinková
+nápověda pro náš kód.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="build">
+<h1>Build<a class="headerlink" href="#build" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><ul class="simple">
+<li><em>rozhodnout jaké instalační balíčky a systémy podporovat a dopsat</em></li>
+</ul>
+</div></blockquote>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">GeoMop Development Procedures (czech)</a></li>
+<li><a class="reference internal" href="#adresarova-struktura">Adresářová struktura</a></li>
+<li><a class="reference internal" href="#kontrola-kodu">Kontrola kódu</a></li>
+<li><a class="reference internal" href="#vyvojarska-dokumentace">Vývojářska Dokumentace</a></li>
+<li><a class="reference internal" href="#uzivatelska-dokumentace">Uživatelská Dokumentace</a></li>
+<li><a class="reference internal" href="#testovani-kodu-po-sobe">Testování kódu po sobě</a></li>
+<li><a class="reference internal" href="#testovani-automaticke-testy">Testování - automatické testy</a></li>
+<li><a class="reference internal" href="#pozadavky-na-vyvojovy-pc">Požadavky na vývojový PC</a></li>
+<li><a class="reference internal" href="#ide">IDE</a></li>
+<li><a class="reference internal" href="#build">Build</a></li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/organization/procedures.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../index.html">GeoMop Source Documentation 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, TUL.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

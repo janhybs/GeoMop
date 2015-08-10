@@ -1,0 +1,30 @@
+helpers package
+===============
+
+Submodules
+----------
+
+helpers.editor_appearance module
+--------------------------------
+
+.. automodule:: helpers.editor_appearance
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+helpers.subyaml_change_analyzer module
+--------------------------------------
+
+.. automodule:: helpers.subyaml_change_analyzer
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: helpers
+    :members:
+    :undoc-members:
+    :show-inheritance:

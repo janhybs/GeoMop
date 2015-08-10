@@ -1,0 +1,22 @@
+dialogs package
+===============
+
+Submodules
+----------
+
+dialogs.geometry_dialog module
+------------------------------
+
+.. automodule:: dialogs.geometry_dialog
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: dialogs
+    :members:
+    :undoc-members:
+    :show-inheritance:

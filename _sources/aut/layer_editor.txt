@@ -1,0 +1,7 @@
+layer_editor module
+===================
+
+.. automodule:: layer_editor
+    :members:
+    :undoc-members:
+    :show-inheritance:

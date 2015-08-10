@@ -1,0 +1,7 @@
+geomop_dialogs module
+=====================
+
+.. automodule:: geomop_dialogs
+    :members:
+    :undoc-members:
+    :show-inheritance:
