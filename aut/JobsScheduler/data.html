@@ -1,0 +1,407 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>data package &mdash; Jobs Scheduler Source Documentation 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Jobs Scheduler Source Documentation 0.0.1 documentation" href="../../index.html" />
+    <link rel="up" title="JobsScheduler" href="modules.html" />
+    <link rel="next" title="delegator module" href="delegator.html" />
+    <link rel="prev" title="communication package" href="communication.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="delegator.html" title="delegator module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="communication.html" title="communication package"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../indexJS.html">Jobs Scheduler Source Documentation 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="modules.html" accesskey="U">JobsScheduler</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="data-package">
+<h1>data package<a class="headerlink" href="#data-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-data.communicator_conf">
+<span id="data-communicator-conf-module"></span><h2>data.communicator_conf module<a class="headerlink" href="#module-data.communicator_conf" title="Permalink to this headline">¶</a></h2>
+<p>Configuration of communication unit</p>
+<dl class="class">
+<dt id="data.communicator_conf.CommunicatorConfig">
+<em class="property">class </em><tt class="descclassname">data.communicator_conf.</tt><tt class="descname">CommunicatorConfig</tt><a class="headerlink" href="#data.communicator_conf.CommunicatorConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Communicator Configuration</p>
+<dl class="attribute">
+<dt id="data.communicator_conf.CommunicatorConfig.communicator_name">
+<tt class="descname">communicator_name</tt><em class="property"> = None</em><a class="headerlink" href="#data.communicator_conf.CommunicatorConfig.communicator_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>this communicator name for login file, ...</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.communicator_conf.CommunicatorConfig.host">
+<tt class="descname">host</tt><em class="property"> = None</em><a class="headerlink" href="#data.communicator_conf.CommunicatorConfig.host" title="Permalink to this definition">¶</a></dt>
+<dd><p>Host (ip or dns) for output configuration</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.communicator_conf.CommunicatorConfig.input_type">
+<tt class="descname">input_type</tt><em class="property"> = None</em><a class="headerlink" href="#data.communicator_conf.CommunicatorConfig.input_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input communication type</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.communicator_conf.CommunicatorConfig.log_level">
+<tt class="descname">log_level</tt><em class="property"> = None</em><a class="headerlink" href="#data.communicator_conf.CommunicatorConfig.log_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>log level for communicator</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.communicator_conf.CommunicatorConfig.next_communicator">
+<tt class="descname">next_communicator</tt><em class="property"> = None</em><a class="headerlink" href="#data.communicator_conf.CommunicatorConfig.next_communicator" title="Permalink to this definition">¶</a></dt>
+<dd><p>communicator file that will be start</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.communicator_conf.CommunicatorConfig.output_type">
+<tt class="descname">output_type</tt><em class="property"> = None</em><a class="headerlink" href="#data.communicator_conf.CommunicatorConfig.output_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output communication type</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.communicator_conf.CommunicatorConfig.pwd">
+<tt class="descname">pwd</tt><em class="property"> = None</em><a class="headerlink" href="#data.communicator_conf.CommunicatorConfig.pwd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Password for output configuration</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.communicator_conf.CommunicatorConfig.uid">
+<tt class="descname">uid</tt><em class="property"> = None</em><a class="headerlink" href="#data.communicator_conf.CommunicatorConfig.uid" title="Permalink to this definition">¶</a></dt>
+<dd><p>User for output configuration</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="data.communicator_conf.InputCommType">
+<em class="property">class </em><tt class="descclassname">data.communicator_conf.</tt><tt class="descname">InputCommType</tt><a class="headerlink" href="#data.communicator_conf.InputCommType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">enum.Enum</span></tt></p>
+<p>Severity of an error.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="data.communicator_conf.OutputCommType">
+<em class="property">class </em><tt class="descclassname">data.communicator_conf.</tt><tt class="descname">OutputCommType</tt><a class="headerlink" href="#data.communicator_conf.OutputCommType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">enum.Enum</span></tt></p>
+<p>Severity of an error.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-data.installation">
+<span id="data-installation-module"></span><h2>data.installation module<a class="headerlink" href="#module-data.installation" title="Permalink to this headline">¶</a></h2>
+<p>class represent instalation</p>
+<dl class="class">
+<dt id="data.installation.Installation">
+<em class="property">class </em><tt class="descclassname">data.installation.</tt><tt class="descname">Installation</tt><a class="headerlink" href="#data.installation.Installation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Files with installation (python files and configuration files) is selected 
+and send to set folder</p>
+<dl class="attribute">
+<dt id="data.installation.Installation.copy_path">
+<tt class="descname">copy_path</tt><em class="property"> = None</em><a class="headerlink" href="#data.installation.Installation.copy_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>installation file path</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.installation.Installation.create_install_dir">
+<tt class="descname">create_install_dir</tt><big>(</big><em>conn</em><big>)</big><a class="headerlink" href="#data.installation.Installation.create_install_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy installation files</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.installation.Installation.get_command">
+<tt class="descname">get_command</tt><big>(</big><em>name</em><big>)</big><a class="headerlink" href="#data.installation.Installation.get_command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find install file according to name and return command for running</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="data.installation.Installation.get_result_dir">
+<em class="property">static </em><tt class="descname">get_result_dir</tt><big>(</big><big>)</big><a class="headerlink" href="#data.installation.Installation.get_result_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return dir for savings results</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.installation.Installation.ins_dirs">
+<tt class="descname">ins_dirs</tt><em class="property"> = None</em><a class="headerlink" href="#data.installation.Installation.ins_dirs" title="Permalink to this definition">¶</a></dt>
+<dd><p>directories to install</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.installation.Installation.ins_files">
+<tt class="descname">ins_files</tt><em class="property"> = None</em><a class="headerlink" href="#data.installation.Installation.ins_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>files to install</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-data.transport_data">
+<span id="data-transport-data-module"></span><h2>data.transport_data module<a class="headerlink" href="#module-data.transport_data" title="Permalink to this headline">¶</a></h2>
+<p>classes for transport</p>
+<dl class="class">
+<dt id="data.transport_data.Action">
+<em class="property">class </em><tt class="descclassname">data.transport_data.</tt><tt class="descname">Action</tt><big>(</big><em>type</em>, <em>json_data=None</em><big>)</big><a class="headerlink" href="#data.transport_data.Action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Action entry class</p>
+<dl class="attribute">
+<dt id="data.transport_data.Action.action">
+<tt class="descname">action</tt><em class="property"> = None</em><a class="headerlink" href="#data.transport_data.Action.action" title="Permalink to this definition">¶</a></dt>
+<dd><p>typed action</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.transport_data.Action.data">
+<tt class="descname">data</tt><em class="property"> = None</em><a class="headerlink" href="#data.transport_data.Action.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>data for action</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.transport_data.Action.get_message">
+<tt class="descname">get_message</tt><big>(</big><big>)</big><a class="headerlink" href="#data.transport_data.Action.get_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>return message from action</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.transport_data.Action.run">
+<tt class="descname">run</tt><big>(</big><big>)</big><a class="headerlink" href="#data.transport_data.Action.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>standart action implementation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.transport_data.Action.type">
+<tt class="descname">type</tt><em class="property"> = None</em><a class="headerlink" href="#data.transport_data.Action.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>action type</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="data.transport_data.ActionData">
+<em class="property">class </em><tt class="descclassname">data.transport_data.</tt><tt class="descname">ActionData</tt><big>(</big><em>json_data</em><big>)</big><a class="headerlink" href="#data.transport_data.ActionData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Action data</p>
+<dl class="attribute">
+<dt id="data.transport_data.ActionData.data">
+<tt class="descname">data</tt><em class="property"> = None</em><a class="headerlink" href="#data.transport_data.ActionData.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Data for json packing</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.transport_data.ActionData.pack">
+<tt class="descname">pack</tt><big>(</big><big>)</big><a class="headerlink" href="#data.transport_data.ActionData.pack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Data packing to json</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="data.transport_data.ActionType">
+<em class="property">class </em><tt class="descclassname">data.transport_data.</tt><tt class="descname">ActionType</tt><a class="headerlink" href="#data.transport_data.ActionType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">enum.Enum</span></tt></p>
+<p>Action type</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="data.transport_data.EmptyData">
+<em class="property">class </em><tt class="descclassname">data.transport_data.</tt><tt class="descname">EmptyData</tt><a class="headerlink" href="#data.transport_data.EmptyData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#data.transport_data.ActionData" title="data.transport_data.ActionData"><tt class="xref py py-class docutils literal"><span class="pre">data.transport_data.ActionData</span></tt></a></p>
+<p>Empty data</p>
+<dl class="method">
+<dt id="data.transport_data.EmptyData.pack">
+<tt class="descname">pack</tt><big>(</big><big>)</big><a class="headerlink" href="#data.transport_data.EmptyData.pack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Data packing</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="data.transport_data.ErrorAction">
+<em class="property">class </em><tt class="descclassname">data.transport_data.</tt><tt class="descname">ErrorAction</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="#data.transport_data.ErrorAction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Action data</p>
+<dl class="method">
+<dt id="data.transport_data.ErrorAction.run">
+<tt class="descname">run</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="#data.transport_data.ErrorAction.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="data.transport_data.ErrorData">
+<em class="property">class </em><tt class="descclassname">data.transport_data.</tt><tt class="descname">ErrorData</tt><big>(</big><em>json_data</em><big>)</big><a class="headerlink" href="#data.transport_data.ErrorData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#data.transport_data.ActionData" title="data.transport_data.ActionData"><tt class="xref py py-class docutils literal"><span class="pre">data.transport_data.ActionData</span></tt></a></p>
+<p>Error data</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="data.transport_data.Message">
+<em class="property">class </em><tt class="descclassname">data.transport_data.</tt><tt class="descname">Message</tt><big>(</big><em>asci=None</em><big>)</big><a class="headerlink" href="#data.transport_data.Message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Communication message</p>
+<dl class="attribute">
+<dt id="data.transport_data.Message.action_type">
+<tt class="descname">action_type</tt><em class="property"> = None</em><a class="headerlink" href="#data.transport_data.Message.action_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>type of action</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.transport_data.Message.json">
+<tt class="descname">json</tt><em class="property"> = None</em><a class="headerlink" href="#data.transport_data.Message.json" title="Permalink to this definition">¶</a></dt>
+<dd><p>json data for action</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.transport_data.Message.len">
+<tt class="descname">len</tt><em class="property"> = None</em><a class="headerlink" href="#data.transport_data.Message.len" title="Permalink to this definition">¶</a></dt>
+<dd><p>length of data</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.transport_data.Message.pack">
+<tt class="descname">pack</tt><big>(</big><big>)</big><a class="headerlink" href="#data.transport_data.Message.pack" title="Permalink to this definition">¶</a></dt>
+<dd><p>pack data for transport to base64 format</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.transport_data.Message.sum">
+<tt class="descname">sum</tt><em class="property"> = None</em><a class="headerlink" href="#data.transport_data.Message.sum" title="Permalink to this definition">¶</a></dt>
+<dd><p>control sum</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.transport_data.Message.unpack">
+<tt class="descname">unpack</tt><big>(</big><em>asci</em><big>)</big><a class="headerlink" href="#data.transport_data.Message.unpack" title="Permalink to this definition">¶</a></dt>
+<dd><p>upack transported data from base 64 format</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="data.transport_data.MessageError">
+<em class="property">exception </em><tt class="descclassname">data.transport_data.</tt><tt class="descname">MessageError</tt><big>(</big><em>msg</em><big>)</big><a class="headerlink" href="#data.transport_data.MessageError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.Exception</span></tt></p>
+<p>Error in nessage format</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-data">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-data" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../indexJS.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">data package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-data.communicator_conf">data.communicator_conf module</a></li>
+<li><a class="reference internal" href="#module-data.installation">data.installation module</a></li>
+<li><a class="reference internal" href="#module-data.transport_data">data.transport_data module</a></li>
+<li><a class="reference internal" href="#module-data">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="communication.html"
+                        title="previous chapter">communication package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="delegator.html"
+                        title="next chapter">delegator module</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/aut/JobsScheduler/data.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="delegator.html" title="delegator module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="communication.html" title="communication package"
+             >previous</a> |</li>
+        <li><a href="../../indexJS.html">Jobs Scheduler Source Documentation 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="modules.html" >JobsScheduler</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, TUL.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

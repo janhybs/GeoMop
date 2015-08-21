@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>data.validation package &mdash; Model Editor Source Documentation 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Model Editor Source Documentation 0.0.1 documentation" href="../../index.html" />
+    <link rel="up" title="data package" href="data.html" />
+    <link rel="next" title="data.yaml package" href="data.yaml.html" />
+    <link rel="prev" title="data package" href="data.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="data.yaml.html" title="data.yaml package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="data.html" title="data package"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../indexME.html">Model Editor Source Documentation 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="modules.html" >ModelEditor</a> &raquo;</li>
+          <li><a href="data.html" accesskey="U">data package</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="data-validation-package">
+<h1>data.validation package<a class="headerlink" href="#data-validation-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-data.validation.checks">
+<span id="data-validation-checks-module"></span><h2>data.validation.checks module<a class="headerlink" href="#module-data.validation.checks" title="Permalink to this headline">¶</a></h2>
+<p>Basic rules for data validation</p>
+<p>&#64;author: Tomas Krizek</p>
+<dl class="function">
+<dt id="data.validation.checks.check_array">
+<tt class="descclassname">data.validation.checks.</tt><tt class="descname">check_array</tt><big>(</big><em>value</em>, <em>input_type</em><big>)</big><a class="headerlink" href="#data.validation.checks.check_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if value is an array of size within a given range.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="data.validation.checks.check_bool">
+<tt class="descclassname">data.validation.checks.</tt><tt class="descname">check_bool</tt><big>(</big><em>value</em>, <em>input_type</em><big>)</big><a class="headerlink" href="#data.validation.checks.check_bool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if value is a boolean.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="data.validation.checks.check_double">
+<tt class="descclassname">data.validation.checks.</tt><tt class="descname">check_double</tt><big>(</big><em>value</em>, <em>input_type</em><big>)</big><a class="headerlink" href="#data.validation.checks.check_double" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if value is a real number within given range.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="data.validation.checks.check_filename">
+<tt class="descclassname">data.validation.checks.</tt><tt class="descname">check_filename</tt><big>(</big><em>value</em>, <em>input_type</em><big>)</big><a class="headerlink" href="#data.validation.checks.check_filename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Placeholder for FileName validation.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="data.validation.checks.check_integer">
+<tt class="descclassname">data.validation.checks.</tt><tt class="descname">check_integer</tt><big>(</big><em>value</em>, <em>input_type</em><big>)</big><a class="headerlink" href="#data.validation.checks.check_integer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if value is an integer within given range.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="data.validation.checks.check_record_key">
+<tt class="descclassname">data.validation.checks.</tt><tt class="descname">check_record_key</tt><big>(</big><em>children_keys</em>, <em>key</em>, <em>input_type</em><big>)</big><a class="headerlink" href="#data.validation.checks.check_record_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks a single key within a record.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="data.validation.checks.check_scalar">
+<tt class="descclassname">data.validation.checks.</tt><tt class="descname">check_scalar</tt><big>(</big><em>node</em>, <em>input_type</em><big>)</big><a class="headerlink" href="#data.validation.checks.check_scalar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks scalar node value.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="data.validation.checks.check_selection">
+<tt class="descclassname">data.validation.checks.</tt><tt class="descname">check_selection</tt><big>(</big><em>value</em>, <em>input_type</em><big>)</big><a class="headerlink" href="#data.validation.checks.check_selection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if value is a valid option in given selection.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="data.validation.checks.check_string">
+<tt class="descclassname">data.validation.checks.</tt><tt class="descname">check_string</tt><big>(</big><em>value</em>, <em>input_type</em><big>)</big><a class="headerlink" href="#data.validation.checks.check_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if value is a string.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="data.validation.checks.get_abstractrecord_type">
+<tt class="descclassname">data.validation.checks.</tt><tt class="descname">get_abstractrecord_type</tt><big>(</big><em>node</em>, <em>input_type</em><big>)</big><a class="headerlink" href="#data.validation.checks.get_abstractrecord_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the concrete TYPE of abstract record. ValidationErrors
+can occur if it is impossible to resolve the type.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-data.validation.errors">
+<span id="data-validation-errors-module"></span><h2>data.validation.errors module<a class="headerlink" href="#module-data.validation.errors" title="Permalink to this headline">¶</a></h2>
+<p>GeoMop Model</p>
+<p>Errors of data validation</p>
+<p>&#64;author: Tomas Krizek</p>
+<dl class="exception">
+<dt id="data.validation.errors.InvalidAbstractRecordType">
+<em class="property">exception </em><tt class="descclassname">data.validation.errors.</tt><tt class="descname">InvalidAbstractRecordType</tt><big>(</big><em>type_name</em>, <em>abstract_name</em><big>)</big><a class="headerlink" href="#data.validation.errors.InvalidAbstractRecordType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#data.validation.errors.ValidationError" title="data.validation.errors.ValidationError"><tt class="xref py py-class docutils literal"><span class="pre">data.validation.errors.ValidationError</span></tt></a></p>
+<p>Error occurs when AbstractRecord TYPE is invalid.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="data.validation.errors.InvalidOption">
+<em class="property">exception </em><tt class="descclassname">data.validation.errors.</tt><tt class="descname">InvalidOption</tt><big>(</big><em>option</em>, <em>selection_name</em><big>)</big><a class="headerlink" href="#data.validation.errors.InvalidOption" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#data.validation.errors.ValidationError" title="data.validation.errors.ValidationError"><tt class="xref py py-class docutils literal"><span class="pre">data.validation.errors.ValidationError</span></tt></a></p>
+<p>Error occurs when the selected option is not valid.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="data.validation.errors.MissingAbstractRecordType">
+<em class="property">exception </em><tt class="descclassname">data.validation.errors.</tt><tt class="descname">MissingAbstractRecordType</tt><a class="headerlink" href="#data.validation.errors.MissingAbstractRecordType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#data.validation.errors.ValidationError" title="data.validation.errors.ValidationError"><tt class="xref py py-class docutils literal"><span class="pre">data.validation.errors.ValidationError</span></tt></a></p>
+<p>Error occurs when AbstractRecord TYPE can&#8217;t be determined.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="data.validation.errors.MissingKey">
+<em class="property">exception </em><tt class="descclassname">data.validation.errors.</tt><tt class="descname">MissingKey</tt><big>(</big><em>key</em>, <em>record_name</em><big>)</big><a class="headerlink" href="#data.validation.errors.MissingKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#data.validation.errors.ValidationError" title="data.validation.errors.ValidationError"><tt class="xref py py-class docutils literal"><span class="pre">data.validation.errors.ValidationError</span></tt></a></p>
+<p>Error occurs when an obligatory key is not specified in record.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="data.validation.errors.NotEnoughItems">
+<em class="property">exception </em><tt class="descclassname">data.validation.errors.</tt><tt class="descname">NotEnoughItems</tt><big>(</big><em>amount</em><big>)</big><a class="headerlink" href="#data.validation.errors.NotEnoughItems" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#data.validation.errors.ValidationError" title="data.validation.errors.ValidationError"><tt class="xref py py-class docutils literal"><span class="pre">data.validation.errors.ValidationError</span></tt></a></p>
+<p>Error occurs when array does not have enough items.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="data.validation.errors.TooManyItems">
+<em class="property">exception </em><tt class="descclassname">data.validation.errors.</tt><tt class="descname">TooManyItems</tt><big>(</big><em>amount</em><big>)</big><a class="headerlink" href="#data.validation.errors.TooManyItems" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#data.validation.errors.ValidationError" title="data.validation.errors.ValidationError"><tt class="xref py py-class docutils literal"><span class="pre">data.validation.errors.ValidationError</span></tt></a></p>
+<p>Error occurs when array has too many items.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="data.validation.errors.UnknownKey">
+<em class="property">exception </em><tt class="descclassname">data.validation.errors.</tt><tt class="descname">UnknownKey</tt><big>(</big><em>key</em>, <em>record_name</em><big>)</big><a class="headerlink" href="#data.validation.errors.UnknownKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#data.validation.errors.ValidationError" title="data.validation.errors.ValidationError"><tt class="xref py py-class docutils literal"><span class="pre">data.validation.errors.ValidationError</span></tt></a></p>
+<p>Error occurs when an unknown key is encountered in record.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="data.validation.errors.ValidationError">
+<em class="property">exception </em><tt class="descclassname">data.validation.errors.</tt><tt class="descname">ValidationError</tt><a class="headerlink" href="#data.validation.errors.ValidationError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.Exception</span></tt></p>
+<p>Error that happens during validation.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="data.validation.errors.ValidationTypeError">
+<em class="property">exception </em><tt class="descclassname">data.validation.errors.</tt><tt class="descname">ValidationTypeError</tt><a class="headerlink" href="#data.validation.errors.ValidationTypeError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#data.validation.errors.ValidationError" title="data.validation.errors.ValidationError"><tt class="xref py py-class docutils literal"><span class="pre">data.validation.errors.ValidationError</span></tt></a></p>
+<p>Error occurs when invalid type is encountered.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="data.validation.errors.ValueTooBig">
+<em class="property">exception </em><tt class="descclassname">data.validation.errors.</tt><tt class="descname">ValueTooBig</tt><big>(</big><em>max_value</em><big>)</big><a class="headerlink" href="#data.validation.errors.ValueTooBig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#data.validation.errors.ValidationError" title="data.validation.errors.ValidationError"><tt class="xref py py-class docutils literal"><span class="pre">data.validation.errors.ValidationError</span></tt></a></p>
+<p>Error occurs when value is greater than allowed maximum.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="data.validation.errors.ValueTooSmall">
+<em class="property">exception </em><tt class="descclassname">data.validation.errors.</tt><tt class="descname">ValueTooSmall</tt><big>(</big><em>min_value</em><big>)</big><a class="headerlink" href="#data.validation.errors.ValueTooSmall" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#data.validation.errors.ValidationError" title="data.validation.errors.ValidationError"><tt class="xref py py-class docutils literal"><span class="pre">data.validation.errors.ValidationError</span></tt></a></p>
+<p>Error occurs when value is less than required minimum.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-data.validation.validator">
+<span id="data-validation-validator-module"></span><h2>data.validation.validator module<a class="headerlink" href="#module-data.validation.validator" title="Permalink to this headline">¶</a></h2>
+<p>Validator for Flow123D data structure</p>
+<dl class="class">
+<dt id="data.validation.validator.Validator">
+<em class="property">class </em><tt class="descclassname">data.validation.validator.</tt><tt class="descname">Validator</tt><big>(</big><em>error_handler</em><big>)</big><a class="headerlink" href="#data.validation.validator.Validator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Handles data structure validation.</p>
+<dl class="attribute">
+<dt id="data.validation.validator.Validator.SCALAR">
+<tt class="descname">SCALAR</tt><em class="property"> = ['Integer', 'Double', 'Bool', 'String', 'Selection', 'FileName']</em><a class="headerlink" href="#data.validation.validator.Validator.SCALAR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="data.validation.validator.Validator.validate">
+<tt class="descname">validate</tt><big>(</big><em>node</em>, <em>input_type</em><big>)</big><a class="headerlink" href="#data.validation.validator.Validator.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs data validation of node with the specified input_type.</p>
+<p>Validation is performed recursively on all children nodes as well.
+Options are added to nodes where applicable (record keys, selection, ...).</p>
+<p>Returns True when all data was correctly validated, False otherwise.
+Attribute errors contains a list of occurred errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-data.validation">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-data.validation" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../indexME.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">data.validation package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-data.validation.checks">data.validation.checks module</a></li>
+<li><a class="reference internal" href="#module-data.validation.errors">data.validation.errors module</a></li>
+<li><a class="reference internal" href="#module-data.validation.validator">data.validation.validator module</a></li>
+<li><a class="reference internal" href="#module-data.validation">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="data.html"
+                        title="previous chapter">data package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="data.yaml.html"
+                        title="next chapter">data.yaml package</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/aut/ModelEditor/data.validation.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="data.yaml.html" title="data.yaml package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="data.html" title="data package"
+             >previous</a> |</li>
+        <li><a href="../../indexME.html">Model Editor Source Documentation 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="modules.html" >ModelEditor</a> &raquo;</li>
+          <li><a href="data.html" >data package</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, TUL.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

@@ -24,9 +24,9 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="top" title="GeoMop Source Documentation 0.0.1 documentation" href="../index.html" />
-    <link rel="up" title="lib" href="lib.html" />
+    <link rel="up" title="lib" href="modules.html" />
     <link rel="next" title="geomop_dialogs module" href="geomop_dialogs.html" />
-    <link rel="prev" title="lib" href="lib.html" /> 
+    <link rel="prev" title="lib" href="modules.html" /> 
   </head>
   <body>
     <div class="related">
@@ -42,10 +42,10 @@
           <a href="geomop_dialogs.html" title="geomop_dialogs module"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="lib.html" title="lib"
+          <a href="modules.html" title="lib"
              accesskey="P">previous</a> |</li>
         <li><a href="../index.html">GeoMop Source Documentation 0.0.1 documentation</a> &raquo;</li>
-          <li><a href="lib.html" accesskey="U">lib</a> &raquo;</li> 
+          <li><a href="modules.html" accesskey="U">lib</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -54,8 +54,28 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="config-module">
-<h1>config module<a class="headerlink" href="#config-module" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-config">
+<span id="config-module"></span><h1>config module<a class="headerlink" href="#module-config" title="Permalink to this headline">¶</a></h1>
+<p>Library for work with state of GeoMops applications</p>
+<dl class="function">
+<dt id="config.delete_config_file">
+<tt class="descclassname">config.</tt><tt class="descname">delete_config_file</tt><big>(</big><em>name</em>, <em>dir=None</em><big>)</big><a class="headerlink" href="#config.delete_config_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete config file Name.cfg from config directory</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="config.get_config_file">
+<tt class="descclassname">config.</tt><tt class="descname">get_config_file</tt><big>(</big><em>name</em>, <em>dir=None</em><big>)</big><a class="headerlink" href="#config.get_config_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get config object from file Name.cfg in config directory</p>
+<p>return: Config object or None (if file not exist)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="config.save_config_file">
+<tt class="descclassname">config.</tt><tt class="descname">save_config_file</tt><big>(</big><em>name</em>, <em>config</em>, <em>dir=None</em><big>)</big><a class="headerlink" href="#config.save_config_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save config object to file Name.cfg in config directory</p>
+</dd></dl>
+
 </div>
 
 
@@ -65,7 +85,7 @@
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="lib.html"
+  <p class="topless"><a href="modules.html"
                         title="previous chapter">lib</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="geomop_dialogs.html"
@@ -105,15 +125,15 @@
           <a href="geomop_dialogs.html" title="geomop_dialogs module"
              >next</a> |</li>
         <li class="right" >
-          <a href="lib.html" title="lib"
+          <a href="modules.html" title="lib"
              >previous</a> |</li>
         <li><a href="../index.html">GeoMop Source Documentation 0.0.1 documentation</a> &raquo;</li>
-          <li><a href="lib.html" >lib</a> &raquo;</li> 
+          <li><a href="modules.html" >lib</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
         &copy; Copyright 2015, TUL.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

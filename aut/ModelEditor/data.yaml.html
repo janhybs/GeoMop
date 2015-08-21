@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>data.yaml package &mdash; Model Editor Source Documentation 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Model Editor Source Documentation 0.0.1 documentation" href="../../index.html" />
+    <link rel="up" title="data package" href="data.html" />
+    <link rel="next" title="dialogs package" href="dialogs.html" />
+    <link rel="prev" title="data.validation package" href="data.validation.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="dialogs.html" title="dialogs package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="data.validation.html" title="data.validation package"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../indexME.html">Model Editor Source Documentation 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="modules.html" >ModelEditor</a> &raquo;</li>
+          <li><a href="data.html" accesskey="U">data package</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="data-yaml-package">
+<h1>data.yaml package<a class="headerlink" href="#data-yaml-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-data.yaml.constructor">
+<span id="data-yaml-constructor-module"></span><h2>data.yaml.constructor module<a class="headerlink" href="#module-data.yaml.constructor" title="Permalink to this headline">¶</a></h2>
+<p>Customized pyyaml constructor for scalar values</p>
+<p>This file contains some changes of the original pyyaml library.
+Author of changes: Tomas Krizek</p>
+<p>Original license follows</p>
+<p>Copyright (c) 2006 Kirill Simonov</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the &#8220;Software&#8221;), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED &#8220;AS IS&#8221;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
+<dl class="function">
+<dt id="data.yaml.constructor.construct_scalar">
+<tt class="descclassname">data.yaml.constructor.</tt><tt class="descname">construct_scalar</tt><big>(</big><em>value</em>, <em>tag</em><big>)</big><a class="headerlink" href="#data.yaml.constructor.construct_scalar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a scalar value of the correct python type.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-data.yaml.loader">
+<span id="data-yaml-loader-module"></span><h2>data.yaml.loader module<a class="headerlink" href="#module-data.yaml.loader" title="Permalink to this headline">¶</a></h2>
+<p>Package for generating DataNode structure from YAML document.</p>
+<p>Author: Tomas Krizek</p>
+<dl class="class">
+<dt id="data.yaml.loader.Loader">
+<em class="property">class </em><tt class="descclassname">data.yaml.loader.</tt><tt class="descname">Loader</tt><big>(</big><em>error_handler=None</em><big>)</big><a class="headerlink" href="#data.yaml.loader.Loader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Generates DataNode structure from YAML document.</p>
+<dl class="method">
+<dt id="data.yaml.loader.Loader.load">
+<tt class="descname">load</tt><big>(</big><em>document</em><big>)</big><a class="headerlink" href="#data.yaml.loader.Loader.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads the YAML document and returns the root DataNode.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-data.yaml.resolver">
+<span id="data-yaml-resolver-module"></span><h2>data.yaml.resolver module<a class="headerlink" href="#module-data.yaml.resolver" title="Permalink to this headline">¶</a></h2>
+<p>Customized pyyaml resolver</p>
+<p>This file contains some changes of the original pyyaml library.
+Author of changes: Tomas Krizek</p>
+<p>Original license follows</p>
+<p>Copyright (c) 2006 Kirill Simonov</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the &#8220;Software&#8221;), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED &#8220;AS IS&#8221;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
+<dl class="function">
+<dt id="data.yaml.resolver.resolve_scalar_tag">
+<tt class="descclassname">data.yaml.resolver.</tt><tt class="descname">resolve_scalar_tag</tt><big>(</big><em>value</em><big>)</big><a class="headerlink" href="#data.yaml.resolver.resolve_scalar_tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resolves a tag for scalar value.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-data.yaml.transformator">
+<span id="data-yaml-transformator-module"></span><h2>data.yaml.transformator module<a class="headerlink" href="#module-data.yaml.transformator" title="Permalink to this headline">¶</a></h2>
+<p>File for transformation of yaml files to another version</p>
+<dl class="docutils">
+<dt>Actions:</dt>
+<dd><ul class="first last simple">
+<li>move-key - Move value of set key from source_path to destination_path.
+Not existing directory of destination_path cause exception. If both path 
+is same, only key is different, key is renamed. Destination_path placed in 
+source_path cause exception. If source_path not exist action si skipped. 
+Refference or anchors is moved and if its relative possition is changed, 
+result must be fixed by user.</li>
+<li>delete-key - Delete key on set path. If key contains anchor or refference,
+transporter try resolve reference. If path not exist action si skipped.</li>
+<li>rename-type - Change tag on set path from old_name to new_name.</li>
+</ul>
+</dd>
+<dt>Description:</dt>
+<dd>Transformator check se json transformation file. If this file is in bad format,
+cause exception. After checking is processet action in set order. Repetitional
+processing this program can cause exception or corrupt data.</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;Example file&quot;</span><span class="p">,</span>
+    <span class="s">&quot;description&quot;</span><span class="p">:</span> <span class="s">&quot;Template for creating transformation file&quot;</span><span class="p">,</span>
+    <span class="s">&quot;old_format&quot;</span><span class="p">:</span> <span class="s">&quot;&quot;</span><span class="p">,</span>
+    <span class="s">&quot;new_format&quot;</span><span class="p">:</span> <span class="s">&quot;&quot;</span><span class="p">,</span>
+    <span class="s">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s">&quot;action&quot;</span><span class="p">:</span> <span class="s">&quot;move-key&quot;</span><span class="p">,</span>
+            <span class="s">&quot;parameters&quot;</span><span class="p">:{</span>
+                <span class="s">&quot;source_path&quot;</span><span class="p">:</span><span class="s">&quot;/problem/primary_equation/input_fields&quot;</span><span class="p">,</span>
+                <span class="s">&quot;destination_path&quot;</span><span class="p">:</span><span class="s">&quot;/problem/mesh/balance&quot;</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s">&quot;action&quot;</span><span class="p">:</span> <span class="s">&quot;delete-key&quot;</span><span class="p">,</span>
+            <span class="s">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s">&quot;path&quot;</span><span class="p">:</span> <span class="s">&quot;/problem/mesh/mesh_file&quot;</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s">&quot;action&quot;</span><span class="p">:</span> <span class="s">&quot;rename-type&quot;</span><span class="p">,</span>
+            <span class="s">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s">&quot;path&quot;</span><span class="p">:</span> <span class="s">&quot;/problem/primary_equation&quot;</span><span class="p">,</span>
+                <span class="s">&quot;old_name&quot;</span><span class="p">:</span> <span class="s">&quot;Steady_MH&quot;</span><span class="p">,</span>
+                <span class="s">&quot;new_name&quot;</span><span class="p">:</span> <span class="s">&quot;SteadyMH&quot;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="exception">
+<dt id="data.yaml.transformator.TransformationFileFormatError">
+<em class="property">exception </em><tt class="descclassname">data.yaml.transformator.</tt><tt class="descname">TransformationFileFormatError</tt><big>(</big><em>msg</em><big>)</big><a class="headerlink" href="#data.yaml.transformator.TransformationFileFormatError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.Exception</span></tt></p>
+<p>Represents an error in transformation file</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="data.yaml.transformator.Transformator">
+<em class="property">class </em><tt class="descclassname">data.yaml.transformator.</tt><tt class="descname">Transformator</tt><big>(</big><em>transform_file</em>, <em>data=None</em><big>)</big><a class="headerlink" href="#data.yaml.transformator.Transformator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Transform yaml file to new version</p>
+<dl class="attribute">
+<dt id="data.yaml.transformator.Transformator.description">
+<tt class="descname">description</tt><a class="headerlink" href="#data.yaml.transformator.Transformator.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>return transformation description</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.yaml.transformator.Transformator.name">
+<tt class="descname">name</tt><a class="headerlink" href="#data.yaml.transformator.Transformator.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>return transformation name</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.yaml.transformator.Transformator.new_version">
+<tt class="descname">new_version</tt><a class="headerlink" href="#data.yaml.transformator.Transformator.new_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>return version of yaml document after transformation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.yaml.transformator.Transformator.old_version">
+<tt class="descname">old_version</tt><a class="headerlink" href="#data.yaml.transformator.Transformator.old_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>return version of yaml document befor transformation</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.yaml.transformator.Transformator.transform">
+<tt class="descname">transform</tt><big>(</big><em>yaml</em><big>)</big><a class="headerlink" href="#data.yaml.transformator.Transformator.transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>transform yaml file</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-data.yaml">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-data.yaml" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../indexME.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">data.yaml package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-data.yaml.constructor">data.yaml.constructor module</a></li>
+<li><a class="reference internal" href="#module-data.yaml.loader">data.yaml.loader module</a></li>
+<li><a class="reference internal" href="#module-data.yaml.resolver">data.yaml.resolver module</a></li>
+<li><a class="reference internal" href="#module-data.yaml.transformator">data.yaml.transformator module</a></li>
+<li><a class="reference internal" href="#module-data.yaml">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="data.validation.html"
+                        title="previous chapter">data.validation package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="dialogs.html"
+                        title="next chapter">dialogs package</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/aut/ModelEditor/data.yaml.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="dialogs.html" title="dialogs package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="data.validation.html" title="data.validation package"
+             >previous</a> |</li>
+        <li><a href="../../indexME.html">Model Editor Source Documentation 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="modules.html" >ModelEditor</a> &raquo;</li>
+          <li><a href="data.html" >data package</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, TUL.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

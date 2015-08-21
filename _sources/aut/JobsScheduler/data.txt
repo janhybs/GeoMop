@@ -1,0 +1,38 @@
+data package
+============
+
+Submodules
+----------
+
+data.communicator_conf module
+-----------------------------
+
+.. automodule:: data.communicator_conf
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+data.installation module
+------------------------
+
+.. automodule:: data.installation
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+data.transport_data module
+--------------------------
+
+.. automodule:: data.transport_data
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: data
+    :members:
+    :undoc-members:
+    :show-inheritance:

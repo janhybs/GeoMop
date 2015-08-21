@@ -1,0 +1,22 @@
+helpers package
+===============
+
+Submodules
+----------
+
+helpers.winssh module
+---------------------
+
+.. automodule:: helpers.winssh
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: helpers
+    :members:
+    :undoc-members:
+    :show-inheritance:

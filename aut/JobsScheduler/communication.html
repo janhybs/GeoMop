@@ -1,0 +1,414 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>communication package &mdash; Jobs Scheduler Source Documentation 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Jobs Scheduler Source Documentation 0.0.1 documentation" href="../../index.html" />
+    <link rel="up" title="JobsScheduler" href="modules.html" />
+    <link rel="next" title="data package" href="data.html" />
+    <link rel="prev" title="JobsScheduler" href="modules.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="data.html" title="data package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="JobsScheduler"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../indexJS.html">Jobs Scheduler Source Documentation 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="modules.html" accesskey="U">JobsScheduler</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="communication-package">
+<h1>communication package<a class="headerlink" href="#communication-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-communication.communication">
+<span id="communication-communication-module"></span><h2>communication.communication module<a class="headerlink" href="#module-communication.communication" title="Permalink to this headline">¶</a></h2>
+<p>Classes for handing messages over net</p>
+<dl class="class">
+<dt id="communication.communication.InputComm">
+<em class="property">class </em><tt class="descclassname">communication.communication.</tt><tt class="descname">InputComm</tt><big>(</big><em>input</em>, <em>output</em><big>)</big><a class="headerlink" href="#communication.communication.InputComm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Input communication</p>
+<dl class="attribute">
+<dt id="communication.communication.InputComm.input">
+<tt class="descname">input</tt><em class="property"> = None</em><a class="headerlink" href="#communication.communication.InputComm.input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input Stream</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="communication.communication.InputComm.output">
+<tt class="descname">output</tt><em class="property"> = None</em><a class="headerlink" href="#communication.communication.InputComm.output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output Stream</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="communication.communication.InputComm.receive">
+<tt class="descname">receive</tt><big>(</big><em>wait=60</em><big>)</big><a class="headerlink" href="#communication.communication.InputComm.receive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Receive message from input stream</p>
+<p>Function wait for answer for set time in seconds</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="communication.communication.InputComm.send">
+<tt class="descname">send</tt><big>(</big><em>msg</em><big>)</big><a class="headerlink" href="#communication.communication.InputComm.send" title="Permalink to this definition">¶</a></dt>
+<dd><p>send message to output stream</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="communication.communication.OutputComm">
+<em class="property">class </em><tt class="descclassname">communication.communication.</tt><tt class="descname">OutputComm</tt><big>(</big><em>host</em><big>)</big><a class="headerlink" href="#communication.communication.OutputComm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Ancestor of output communication classes</p>
+<dl class="method">
+<dt id="communication.communication.OutputComm.connect">
+<tt class="descname">connect</tt><big>(</big><big>)</big><a class="headerlink" href="#communication.communication.OutputComm.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>connect session</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="communication.communication.OutputComm.disconnect">
+<tt class="descname">disconnect</tt><big>(</big><big>)</big><a class="headerlink" href="#communication.communication.OutputComm.disconnect" title="Permalink to this definition">¶</a></dt>
+<dd><p>disconnect session</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="communication.communication.OutputComm.exec_">
+<tt class="descname">exec_</tt><big>(</big><em>command</em><big>)</big><a class="headerlink" href="#communication.communication.OutputComm.exec_" title="Permalink to this definition">¶</a></dt>
+<dd><p>run command</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="communication.communication.OutputComm.get_file">
+<tt class="descname">get_file</tt><big>(</big><em>file_name</em><big>)</big><a class="headerlink" href="#communication.communication.OutputComm.get_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>download file from installation folder</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="communication.communication.OutputComm.host">
+<tt class="descname">host</tt><em class="property"> = None</em><a class="headerlink" href="#communication.communication.OutputComm.host" title="Permalink to this definition">¶</a></dt>
+<dd><p>ip or dns of host for communication</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="communication.communication.OutputComm.install">
+<tt class="descname">install</tt><big>(</big><big>)</big><a class="headerlink" href="#communication.communication.OutputComm.install" title="Permalink to this definition">¶</a></dt>
+<dd><p>copy installation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="communication.communication.OutputComm.installation">
+<tt class="descname">installation</tt><em class="property"> = None</em><a class="headerlink" href="#communication.communication.OutputComm.installation" title="Permalink to this definition">¶</a></dt>
+<dd><p>installation where is copied files</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="communication.communication.OutputComm.receive">
+<tt class="descname">receive</tt><big>(</big><big>)</big><a class="headerlink" href="#communication.communication.OutputComm.receive" title="Permalink to this definition">¶</a></dt>
+<dd><p>receive json message</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="communication.communication.OutputComm.send">
+<tt class="descname">send</tt><big>(</big><em>msg</em><big>)</big><a class="headerlink" href="#communication.communication.OutputComm.send" title="Permalink to this definition">¶</a></dt>
+<dd><p>send json message</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="communication.communication.SshOutputComm">
+<em class="property">class </em><tt class="descclassname">communication.communication.</tt><tt class="descname">SshOutputComm</tt><big>(</big><em>host</em>, <em>name</em>, <em>password=''</em><big>)</big><a class="headerlink" href="#communication.communication.SshOutputComm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#communication.communication.OutputComm" title="communication.communication.OutputComm"><tt class="xref py py-class docutils literal"><span class="pre">communication.communication.OutputComm</span></tt></a></p>
+<p>Ancestor of communication classes</p>
+<dl class="method">
+<dt id="communication.communication.SshOutputComm.connect">
+<tt class="descname">connect</tt><big>(</big><big>)</big><a class="headerlink" href="#communication.communication.SshOutputComm.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>connect session</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="communication.communication.SshOutputComm.disconnect">
+<tt class="descname">disconnect</tt><big>(</big><big>)</big><a class="headerlink" href="#communication.communication.SshOutputComm.disconnect" title="Permalink to this definition">¶</a></dt>
+<dd><p>disconnect session</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="communication.communication.SshOutputComm.exec_">
+<tt class="descname">exec_</tt><big>(</big><em>python_file</em><big>)</big><a class="headerlink" href="#communication.communication.SshOutputComm.exec_" title="Permalink to this definition">¶</a></dt>
+<dd><p>run set python file in ssh</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="communication.communication.SshOutputComm.get_file">
+<tt class="descname">get_file</tt><big>(</big><em>file_name</em><big>)</big><a class="headerlink" href="#communication.communication.SshOutputComm.get_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>download file from installation folder</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="communication.communication.SshOutputComm.install">
+<tt class="descname">install</tt><big>(</big><big>)</big><a class="headerlink" href="#communication.communication.SshOutputComm.install" title="Permalink to this definition">¶</a></dt>
+<dd><p>make installation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="communication.communication.SshOutputComm.name">
+<tt class="descname">name</tt><em class="property"> = None</em><a class="headerlink" href="#communication.communication.SshOutputComm.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>login name for ssh connection</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="communication.communication.SshOutputComm.password">
+<tt class="descname">password</tt><em class="property"> = None</em><a class="headerlink" href="#communication.communication.SshOutputComm.password" title="Permalink to this definition">¶</a></dt>
+<dd><p>password name for ssh connection</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="communication.communication.SshOutputComm.receive">
+<tt class="descname">receive</tt><big>(</big><em>timeout=60</em><big>)</big><a class="headerlink" href="#communication.communication.SshOutputComm.receive" title="Permalink to this definition">¶</a></dt>
+<dd><p>receive json message</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="communication.communication.SshOutputComm.send">
+<tt class="descname">send</tt><big>(</big><em>mess</em><big>)</big><a class="headerlink" href="#communication.communication.SshOutputComm.send" title="Permalink to this definition">¶</a></dt>
+<dd><p>send json message</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="communication.communication.SshOutputComm.ssh">
+<tt class="descname">ssh</tt><em class="property"> = None</em><a class="headerlink" href="#communication.communication.SshOutputComm.ssh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ssh subprocessed instance</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-communication.communicator">
+<span id="communication-communicator-module"></span><h2>communication.communicator module<a class="headerlink" href="#module-communication.communicator" title="Permalink to this headline">¶</a></h2>
+<p>Class for communacion</p>
+<dl class="class">
+<dt id="communication.communicator.Communicator">
+<em class="property">class </em><tt class="descclassname">communication.communicator.</tt><tt class="descname">Communicator</tt><big>(</big><em>init_conf</em>, <em>action_func_before=None</em>, <em>action_func_after=None</em><big>)</big><a class="headerlink" href="#communication.communicator.Communicator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Communication class</p>
+<dl class="attribute">
+<dt id="communication.communicator.Communicator.action_func_after">
+<tt class="descname">action_func_after</tt><em class="property"> = None</em><a class="headerlink" href="#communication.communicator.Communicator.action_func_after" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for processing of action in class above after sending message</p>
+<p>Parameter: Is received message object
+Return: Message that is return or None</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="communication.communicator.Communicator.action_func_before">
+<tt class="descname">action_func_before</tt><em class="property"> = None</em><a class="headerlink" href="#communication.communicator.Communicator.action_func_before" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for processing of action in class above before sending message</p>
+<p>Parameter: Is received message object
+Return: tuple in two Booleans and message. First boolean if action is resend,
+second if is processed in standart way and if message is not None, is ressend
+without waiting for processing of communicator above</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="communication.communicator.Communicator.close">
+<tt class="descname">close</tt><big>(</big><big>)</big><a class="headerlink" href="#communication.communicator.Communicator.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Release resorces</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="communication.communicator.Communicator.communicator_name">
+<tt class="descname">communicator_name</tt><em class="property"> = None</em><a class="headerlink" href="#communication.communicator.Communicator.communicator_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>this communicator name for login file, ...</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="communication.communicator.Communicator.exec_">
+<tt class="descname">exec_</tt><big>(</big><big>)</big><a class="headerlink" href="#communication.communicator.Communicator.exec_" title="Permalink to this definition">¶</a></dt>
+<dd><p>run set python file</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="communication.communicator.Communicator.input">
+<tt class="descname">input</tt><em class="property"> = None</em><a class="headerlink" href="#communication.communicator.Communicator.input" title="Permalink to this definition">¶</a></dt>
+<dd><p>class for input communication</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="communication.communicator.Communicator.install">
+<tt class="descname">install</tt><big>(</big><big>)</big><a class="headerlink" href="#communication.communicator.Communicator.install" title="Permalink to this definition">¶</a></dt>
+<dd><p>make installation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="communication.communicator.Communicator.log_level">
+<tt class="descname">log_level</tt><em class="property"> = None</em><a class="headerlink" href="#communication.communicator.Communicator.log_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>log level for communicator</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="communication.communicator.Communicator.next_communicator">
+<tt class="descname">next_communicator</tt><em class="property"> = None</em><a class="headerlink" href="#communication.communicator.Communicator.next_communicator" title="Permalink to this definition">¶</a></dt>
+<dd><p>communicator file that will be start</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="communication.communicator.Communicator.output">
+<tt class="descname">output</tt><em class="property"> = None</em><a class="headerlink" href="#communication.communicator.Communicator.output" title="Permalink to this definition">¶</a></dt>
+<dd><p>class for output communication</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="communication.communicator.Communicator.receive_message">
+<tt class="descname">receive_message</tt><big>(</big><big>)</big><a class="headerlink" href="#communication.communicator.Communicator.receive_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>receive message from output</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="communication.communicator.Communicator.run">
+<tt class="descname">run</tt><big>(</big><big>)</big><a class="headerlink" href="#communication.communicator.Communicator.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Infinite loop that is interupt by sending stop action by input</p>
+<p>Use send_action instead, if you want work in real time</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="communication.communicator.Communicator.send_message">
+<tt class="descname">send_message</tt><big>(</big><em>message</em><big>)</big><a class="headerlink" href="#communication.communicator.Communicator.send_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>send message to output</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="communication.communicator.Communicator.sleep_interval">
+<tt class="descname">sleep_interval</tt><em class="property"> = None</em><a class="headerlink" href="#communication.communicator.Communicator.sleep_interval" title="Permalink to this definition">¶</a></dt>
+<dd><p>interval for reading input (default 5 - 5s)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="communication.communicator.Communicator.standart_action_funcion_after">
+<tt class="descname">standart_action_funcion_after</tt><big>(</big><em>message</em><big>)</big><a class="headerlink" href="#communication.communicator.Communicator.standart_action_funcion_after" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function will be set by communicator. This is empty default implementation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="communication.communicator.Communicator.standart_action_funcion_before">
+<tt class="descname">standart_action_funcion_before</tt><big>(</big><em>message</em><big>)</big><a class="headerlink" href="#communication.communicator.Communicator.standart_action_funcion_before" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function will be set by communicator. This is empty default implementation.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-communication">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-communication" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../indexJS.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">communication package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-communication.communication">communication.communication module</a></li>
+<li><a class="reference internal" href="#module-communication.communicator">communication.communicator module</a></li>
+<li><a class="reference internal" href="#module-communication">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="modules.html"
+                        title="previous chapter">JobsScheduler</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="data.html"
+                        title="next chapter">data package</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/aut/JobsScheduler/communication.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="data.html" title="data package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="JobsScheduler"
+             >previous</a> |</li>
+        <li><a href="../../indexJS.html">Jobs Scheduler Source Documentation 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="modules.html" >JobsScheduler</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, TUL.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

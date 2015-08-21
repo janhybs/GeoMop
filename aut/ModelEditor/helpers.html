@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>helpers package &mdash; Model Editor Source Documentation 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Model Editor Source Documentation 0.0.1 documentation" href="../../index.html" />
+    <link rel="up" title="ModelEditor" href="modules.html" />
+    <link rel="next" title="importer module" href="importer.html" />
+    <link rel="prev" title="dialogs package" href="dialogs.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="importer.html" title="importer module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="dialogs.html" title="dialogs package"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../indexME.html">Model Editor Source Documentation 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="modules.html" accesskey="U">ModelEditor</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="helpers-package">
+<h1>helpers package<a class="headerlink" href="#helpers-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-helpers.editor_appearance">
+<span id="helpers-editor-appearance-module"></span><h2>helpers.editor_appearance module<a class="headerlink" href="#module-helpers.editor_appearance" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="helpers.editor_appearance.EditorAppearance">
+<em class="property">class </em><tt class="descclassname">helpers.editor_appearance.</tt><tt class="descname">EditorAppearance</tt><a class="headerlink" href="#helpers.editor_appearance.EditorAppearance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Unique editors appearance class</p>
+<dl class="attribute">
+<dt id="helpers.editor_appearance.EditorAppearance.DEFAULT_FONT">
+<tt class="descname">DEFAULT_FONT</tt><em class="property"> = &lt;PyQt5.QtGui.QFont object at 0x2b8a2cac1e48&gt;</em><a class="headerlink" href="#helpers.editor_appearance.EditorAppearance.DEFAULT_FONT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="helpers.editor_appearance.EditorAppearance.set_default_appearens">
+<em class="property">classmethod </em><tt class="descname">set_default_appearens</tt><big>(</big><em>editor</em><big>)</big><a class="headerlink" href="#helpers.editor_appearance.EditorAppearance.set_default_appearens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set default applicatin editor appearents</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-helpers.subyaml_change_analyzer">
+<span id="helpers-subyaml-change-analyzer-module"></span><h2>helpers.subyaml_change_analyzer module<a class="headerlink" href="#module-helpers.subyaml_change_analyzer" title="Permalink to this headline">¶</a></h2>
+<p>Helper for yaml text editor</p>
+<dl class="class">
+<dt id="helpers.subyaml_change_analyzer.PosType">
+<em class="property">class </em><tt class="descclassname">helpers.subyaml_change_analyzer.</tt><tt class="descname">PosType</tt><a class="headerlink" href="#helpers.subyaml_change_analyzer.PosType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">enum.Enum</span></tt></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="helpers.subyaml_change_analyzer.SubYamlChangeAnalyzer">
+<em class="property">class </em><tt class="descclassname">helpers.subyaml_change_analyzer.</tt><tt class="descname">SubYamlChangeAnalyzer</tt><big>(</big><em>cursor_line</em>, <em>cursor_index</em>, <em>area</em><big>)</big><a class="headerlink" href="#helpers.subyaml_change_analyzer.SubYamlChangeAnalyzer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Alalize partial yaml text for change character report</p>
+<p>Description: This quick party text analizing is use only for dicision
+if next more expensive text parsing is requard.</p>
+<dl class="method">
+<dt id="helpers.subyaml_change_analyzer.SubYamlChangeAnalyzer.get_pos_type">
+<tt class="descname">get_pos_type</tt><big>(</big><big>)</big><a class="headerlink" href="#helpers.subyaml_change_analyzer.SubYamlChangeAnalyzer.get_pos_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>return line type enum value</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml_change_analyzer.SubYamlChangeAnalyzer.get_tag_poss">
+<em class="property">static </em><tt class="descname">get_tag_poss</tt><big>(</big><em>line</em>, <em>tag</em><big>)</big><a class="headerlink" href="#helpers.subyaml_change_analyzer.SubYamlChangeAnalyzer.get_tag_poss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return possition of tag ended by space or new line</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml_change_analyzer.SubYamlChangeAnalyzer.indent_changed">
+<em class="property">static </em><tt class="descname">indent_changed</tt><big>(</big><em>new_row</em>, <em>old_row</em><big>)</big><a class="headerlink" href="#helpers.subyaml_change_analyzer.SubYamlChangeAnalyzer.indent_changed" title="Permalink to this definition">¶</a></dt>
+<dd><p>compare intendation two rows</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="helpers.subyaml_change_analyzer.SubYamlChangeAnalyzer.key_changed">
+<tt class="descname">key_changed</tt><big>(</big><em>old_first_row</em><big>)</big><a class="headerlink" href="#helpers.subyaml_change_analyzer.SubYamlChangeAnalyzer.key_changed" title="Permalink to this definition">¶</a></dt>
+<dd><p>find key and check id was changed</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml_change_analyzer.SubYamlChangeAnalyzer.uncomment">
+<em class="property">static </em><tt class="descname">uncomment</tt><big>(</big><em>line</em><big>)</big><a class="headerlink" href="#helpers.subyaml_change_analyzer.SubYamlChangeAnalyzer.uncomment" title="Permalink to this definition">¶</a></dt>
+<dd><p>return line witout comments</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="helpers.subyaml_change_analyzer.SubYamlChangeAnalyzer.value_changed">
+<tt class="descname">value_changed</tt><big>(</big><em>old_first_row</em><big>)</big><a class="headerlink" href="#helpers.subyaml_change_analyzer.SubYamlChangeAnalyzer.value_changed" title="Permalink to this definition">¶</a></dt>
+<dd><p>find value and check id was changed</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-helpers">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-helpers" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../indexME.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">helpers package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-helpers.editor_appearance">helpers.editor_appearance module</a></li>
+<li><a class="reference internal" href="#module-helpers.subyaml_change_analyzer">helpers.subyaml_change_analyzer module</a></li>
+<li><a class="reference internal" href="#module-helpers">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="dialogs.html"
+                        title="previous chapter">dialogs package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="importer.html"
+                        title="next chapter">importer module</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/aut/ModelEditor/helpers.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="importer.html" title="importer module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="dialogs.html" title="dialogs package"
+             >previous</a> |</li>
+        <li><a href="../../indexME.html">Model Editor Source Documentation 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="modules.html" >ModelEditor</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, TUL.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

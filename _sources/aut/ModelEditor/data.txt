@@ -1,0 +1,70 @@
+data package
+============
+
+Subpackages
+-----------
+
+.. toctree::
+
+    data.validation
+    data.yaml
+
+Submodules
+----------
+
+data.autoconversion module
+--------------------------
+
+.. automodule:: data.autoconversion
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+data.data_node module
+---------------------
+
+.. automodule:: data.data_node
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+data.error_handler module
+-------------------------
+
+.. automodule:: data.error_handler
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+data.format module
+------------------
+
+.. automodule:: data.format
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+data.import_json module
+-----------------------
+
+.. automodule:: data.import_json
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+data.meconfig module
+--------------------
+
+.. automodule:: data.meconfig
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: data
+    :members:
+    :undoc-members:
+    :show-inheritance:

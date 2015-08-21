@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>importer module &mdash; Model Editor Source Documentation 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Model Editor Source Documentation 0.0.1 documentation" href="../../index.html" />
+    <link rel="up" title="ModelEditor" href="modules.html" />
+    <link rel="next" title="model_editor module" href="model_editor.html" />
+    <link rel="prev" title="helpers package" href="helpers.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="model_editor.html" title="model_editor module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="helpers.html" title="helpers package"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../indexME.html">Model Editor Source Documentation 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="modules.html" accesskey="U">ModelEditor</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-importer">
+<span id="importer-module"></span><h1>importer module<a class="headerlink" href="#module-importer" title="Permalink to this headline">¶</a></h1>
+<dl class="docutils">
+<dt>usage:</dt>
+<dd>importer.py [-h] 
+[&#8211;transformation-name [TRANSFORMATION_NAME [TRANSFORMATION_NAME ...]]]
+[&#8211;destination-file [DESTINATION_FILE]] &#8211;con_file CON_FILE</dd>
+</dl>
+<p>Parameters:</p>
+<div class="highlight-python"><div class="highlight"><pre>-h, --help            
+    show this help message and exit
+--transformation-name [TRANSFORMATION_NAME [TRANSFORMATION_NAME ...]]
+    Transformation rules contained in the Model Editor that are processed after import
+--destination-file [DESTINATION_FILE]
+    The destination file if is different from source file
+--con_file CON_FILE   
+    Con input file
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>Description:</dt>
+<dd>Importer translate Flow123d con file to yaml format. TYPE parameters is 
+transformed to tags (!value). Importer try rewrite references to yaml 
+format and place it to appropriate place. Comments are copied and 
+place to yaml file.  If is set some transformation rules, they are processed 
+after import in set order by <a class="reference internal" href="data.yaml.html#module-data.yaml.transformator" title="data.yaml.transformator"><tt class="xref py py-mod docutils literal"><span class="pre">data.yaml.transformator</span></tt></a>.</dd>
+</dl>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="helpers.html"
+                        title="previous chapter">helpers package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="model_editor.html"
+                        title="next chapter">model_editor module</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/aut/ModelEditor/importer.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="model_editor.html" title="model_editor module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="helpers.html" title="helpers package"
+             >previous</a> |</li>
+        <li><a href="../../indexME.html">Model Editor Source Documentation 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="modules.html" >ModelEditor</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, TUL.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

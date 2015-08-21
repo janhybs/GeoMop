@@ -1,0 +1,30 @@
+dialogs package
+===============
+
+Submodules
+----------
+
+dialogs.json_editor module
+--------------------------
+
+.. automodule:: dialogs.json_editor
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+dialogs.transformation_detail module
+------------------------------------
+
+.. automodule:: dialogs.transformation_detail
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: dialogs
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,46 @@
+panels package
+==============
+
+Submodules
+----------
+
+panels.error_tab module
+-----------------------
+
+.. automodule:: panels.error_tab
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+panels.info_panel module
+------------------------
+
+.. automodule:: panels.info_panel
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+panels.tree module
+------------------
+
+.. automodule:: panels.tree
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+panels.yaml_editor module
+-------------------------
+
+.. automodule:: panels.yaml_editor
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: panels
+    :members:
+    :undoc-members:
+    :show-inheritance:

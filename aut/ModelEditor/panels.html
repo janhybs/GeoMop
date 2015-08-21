@@ -1,0 +1,455 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>panels package &mdash; Model Editor Source Documentation 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Model Editor Source Documentation 0.0.1 documentation" href="../../index.html" />
+    <link rel="up" title="ModelEditor" href="modules.html" />
+    <link rel="prev" title="model_editor module" href="model_editor.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="model_editor.html" title="model_editor module"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../indexME.html">Model Editor Source Documentation 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="modules.html" accesskey="U">ModelEditor</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="panels-package">
+<h1>panels package<a class="headerlink" href="#panels-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-panels.error_tab">
+<span id="panels-error-tab-module"></span><h2>panels.error_tab module<a class="headerlink" href="#module-panels.error_tab" title="Permalink to this headline">¶</a></h2>
+<p>Error widget panel module</p>
+<dl class="class">
+<dt id="panels.error_tab.ErrorWidget">
+<em class="property">class </em><tt class="descclassname">panels.error_tab.</tt><tt class="descname">ErrorWidget</tt><a class="headerlink" href="#panels.error_tab.ErrorWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QListWidget</span></tt></p>
+<p>List widget for viewing errors messages</p>
+<dl class="docutils">
+<dt>Events:</dt>
+<dd><em class="xref std std-ref">item_selected</em></dd>
+</dl>
+<dl class="attribute">
+<dt id="panels.error_tab.ErrorWidget.itemSelected">
+<tt class="descname">itemSelected</tt><a class="headerlink" href="#panels.error_tab.ErrorWidget.itemSelected" title="Permalink to this definition">¶</a></dt>
+<dd><p>Signal is sent when error item is clicked.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="panels.error_tab.ErrorWidget.reload">
+<tt class="descname">reload</tt><big>(</big><big>)</big><a class="headerlink" href="#panels.error_tab.ErrorWidget.reload" title="Permalink to this definition">¶</a></dt>
+<dd><p>start of reload data from config</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="panels.error_tab.ErrorWidget.select_error">
+<tt class="descname">select_error</tt><big>(</big><em>line</em><big>)</big><a class="headerlink" href="#panels.error_tab.ErrorWidget.select_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select error according line number</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-panels.info_panel">
+<span id="panels-info-panel-module"></span><h2>panels.info_panel module<a class="headerlink" href="#module-panels.info_panel" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="panels.info_panel.InfoPanelWidget">
+<em class="property">class </em><tt class="descclassname">panels.info_panel.</tt><tt class="descname">InfoPanelWidget</tt><a class="headerlink" href="#panels.info_panel.InfoPanelWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QTextEdit</span></tt></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-panels.tree">
+<span id="panels-tree-module"></span><h2>panels.tree module<a class="headerlink" href="#module-panels.tree" title="Permalink to this headline">¶</a></h2>
+<p>Tree widget panel module</p>
+<dl class="class">
+<dt id="panels.tree.Node">
+<em class="property">class </em><tt class="descclassname">panels.tree.</tt><tt class="descname">Node</tt><a class="headerlink" href="#panels.tree.Node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Helper static class for transformation cfg root structure
+to model format</p>
+<dl class="staticmethod">
+<dt id="panels.tree.Node.count_child_rows">
+<em class="property">static </em><tt class="descname">count_child_rows</tt><big>(</big><em>node</em><big>)</big><a class="headerlink" href="#panels.tree.Node.count_child_rows" title="Permalink to this definition">¶</a></dt>
+<dd><p>return count of children for node</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="panels.tree.Node.data">
+<em class="property">static </em><tt class="descname">data</tt><big>(</big><em>node</em>, <em>column</em><big>)</big><a class="headerlink" href="#panels.tree.Node.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>return text displyed in tree in set column for node</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="panels.tree.Node.get_child">
+<em class="property">static </em><tt class="descname">get_child</tt><big>(</big><em>node</em>, <em>row</em><big>)</big><a class="headerlink" href="#panels.tree.Node.get_child" title="Permalink to this definition">¶</a></dt>
+<dd><p>return child in row row for node</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="panels.tree.Node.get_parent">
+<em class="property">static </em><tt class="descname">get_parent</tt><big>(</big><em>node</em><big>)</big><a class="headerlink" href="#panels.tree.Node.get_parent" title="Permalink to this definition">¶</a></dt>
+<dd><p>get parent</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="panels.tree.Node.row">
+<em class="property">static </em><tt class="descname">row</tt><big>(</big><em>node</em><big>)</big><a class="headerlink" href="#panels.tree.Node.row" title="Permalink to this definition">¶</a></dt>
+<dd><p>return row index for node</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="panels.tree.TreeOfNodes">
+<em class="property">class </em><tt class="descclassname">panels.tree.</tt><tt class="descname">TreeOfNodes</tt><big>(</big><em>root</em><big>)</big><a class="headerlink" href="#panels.tree.TreeOfNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">PyQt5.QtCore.QAbstractItemModel</span></tt></p>
+<p>tree model structure</p>
+<dl class="method">
+<dt id="panels.tree.TreeOfNodes.columnCount">
+<tt class="descname">columnCount</tt><big>(</big><em>parent</em><big>)</big><a class="headerlink" href="#panels.tree.TreeOfNodes.columnCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amount of columns associated with the parent index
+&#64;param parentindex: the parent index object</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="panels.tree.TreeOfNodes.data">
+<tt class="descname">data</tt><big>(</big><em>node</em>, <em>role</em><big>)</big><a class="headerlink" href="#panels.tree.TreeOfNodes.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>The view calls this to extract data for the row and column
+associated with the parent object
+&#64;param parentindex: the parentindex to extract the data from
+&#64;param role: the data accessing role the view requests from the model</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="panels.tree.TreeOfNodes.headerData">
+<tt class="descname">headerData</tt><big>(</big><em>section</em>, <em>orientation</em>, <em>role</em><big>)</big><a class="headerlink" href="#panels.tree.TreeOfNodes.headerData" title="Permalink to this definition">¶</a></dt>
+<dd><p>set header parameters</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="panels.tree.TreeOfNodes.index">
+<tt class="descname">index</tt><big>(</big><em>row</em>, <em>column</em>, <em>parent</em><big>)</big><a class="headerlink" href="#panels.tree.TreeOfNodes.index" title="Permalink to this definition">¶</a></dt>
+<dd><p>The index is used to access data by the view
+This method overrides the base implementation, needs to be overridden
+&#64;param row: The row to create the index for
+&#64;param column: Not really relevant, the tree item handles this
+&#64;param parent: The parent this index should be created under</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="panels.tree.TreeOfNodes.parent">
+<tt class="descname">parent</tt><big>(</big><em>child</em><big>)</big><a class="headerlink" href="#panels.tree.TreeOfNodes.parent" title="Permalink to this definition">¶</a></dt>
+<dd><p>creates an index for a parent based on a child index, and binds the data
+used by the view to get a parent (from a child)
+&#64;param childindex: the index of the child to get the parent from</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="panels.tree.TreeOfNodes.rowCount">
+<tt class="descname">rowCount</tt><big>(</big><em>parent</em><big>)</big><a class="headerlink" href="#panels.tree.TreeOfNodes.rowCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the amount of rows a parent has
+This comes down to the amount of children associated with the parent
+&#64;param parentindex: the index of the parent</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="panels.tree.TreeWidget">
+<em class="property">class </em><tt class="descclassname">panels.tree.</tt><tt class="descname">TreeWidget</tt><a class="headerlink" href="#panels.tree.TreeWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QTreeView</span></tt></p>
+<p>Tree widget for viewing yaml file tree structure</p>
+<dl class="docutils">
+<dt>Events:</dt>
+<dd><em class="xref std std-ref">item_selected</em></dd>
+</dl>
+<dl class="attribute">
+<dt id="panels.tree.TreeWidget.itemSelected">
+<tt class="descname">itemSelected</tt><a class="headerlink" href="#panels.tree.TreeWidget.itemSelected" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sgnal is sent when  tree item is clicked.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="panels.tree.TreeWidget.reload">
+<tt class="descname">reload</tt><big>(</big><big>)</big><a class="headerlink" href="#panels.tree.TreeWidget.reload" title="Permalink to this definition">¶</a></dt>
+<dd><p>start of reload data from config</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-panels.yaml_editor">
+<span id="panels-yaml-editor-module"></span><h2>panels.yaml_editor module<a class="headerlink" href="#module-panels.yaml_editor" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="panels.yaml_editor.YamlEditorWidget">
+<em class="property">class </em><tt class="descclassname">panels.yaml_editor.</tt><tt class="descname">YamlEditorWidget</tt><big>(</big><em>parent=None</em><big>)</big><a class="headerlink" href="#panels.yaml_editor.YamlEditorWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">PyQt5.Qsci.QsciScintilla</span></tt></p>
+<p>Main editor widget for editing yaml file</p>
+<dl class="docutils">
+<dt>Events:</dt>
+<dd><a class="reference internal" href="#cursor-changed"><em>cursorChanged</em></a>
+<a class="reference internal" href="#node-changed"><em>nodeChanged</em></a>
+<a class="reference internal" href="#structure-changed"><em>structureChanged</em></a>
+<a class="reference internal" href="#error-margin-clicked"><em>errorMarginClicked</em></a></dd>
+</dl>
+<dl class="attribute">
+<dt id="panels.yaml_editor.YamlEditorWidget.cursorChanged">
+<tt class="descname">cursorChanged</tt><a class="headerlink" href="#panels.yaml_editor.YamlEditorWidget.cursorChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Signal is sent when cursor position is changed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="panels.yaml_editor.YamlEditorWidget.errorMarginClicked">
+<tt class="descname">errorMarginClicked</tt><a class="headerlink" href="#panels.yaml_editor.YamlEditorWidget.errorMarginClicked" title="Permalink to this definition">¶</a></dt>
+<dd><p>Signal is sent when margin with error icon is clicked.</p>
+<p>parameter: line number in text document</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="panels.yaml_editor.YamlEditorWidget.mark_selected">
+<tt class="descname">mark_selected</tt><big>(</big><em>start_column</em>, <em>start_row</em>, <em>end_column</em>, <em>end_row</em><big>)</big><a class="headerlink" href="#panels.yaml_editor.YamlEditorWidget.mark_selected" title="Permalink to this definition">¶</a></dt>
+<dd><p>mark area as selected and set cursor to end position</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="panels.yaml_editor.YamlEditorWidget.nodeChanged">
+<tt class="descname">nodeChanged</tt><a class="headerlink" href="#panels.yaml_editor.YamlEditorWidget.nodeChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Signal is sent when node below cursor position is changed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="panels.yaml_editor.YamlEditorWidget.reload">
+<tt class="descname">reload</tt><big>(</big><big>)</big><a class="headerlink" href="#panels.yaml_editor.YamlEditorWidget.reload" title="Permalink to this definition">¶</a></dt>
+<dd><p>reload data from config</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="panels.yaml_editor.YamlEditorWidget.set_new_node">
+<tt class="descname">set_new_node</tt><big>(</big><em>node=None</em><big>)</big><a class="headerlink" href="#panels.yaml_editor.YamlEditorWidget.set_new_node" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="panels.yaml_editor.YamlEditorWidget.structureChanged">
+<tt class="descname">structureChanged</tt><a class="headerlink" href="#panels.yaml_editor.YamlEditorWidget.structureChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Signal is sent when node structure document is changed.
+Reload and check is need</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="panels.yaml_editor.editorPosition">
+<em class="property">class </em><tt class="descclassname">panels.yaml_editor.</tt><tt class="descname">editorPosition</tt><a class="headerlink" href="#panels.yaml_editor.editorPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Helper for guarding cursor position above node</p>
+<dl class="attribute">
+<dt id="panels.yaml_editor.editorPosition.begin_index">
+<tt class="descname">begin_index</tt><em class="property"> = None</em><a class="headerlink" href="#panels.yaml_editor.editorPosition.begin_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>X min data node position</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="panels.yaml_editor.editorPosition.begin_line">
+<tt class="descname">begin_line</tt><em class="property"> = None</em><a class="headerlink" href="#panels.yaml_editor.editorPosition.begin_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Y min data node position</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="panels.yaml_editor.editorPosition.end_index">
+<tt class="descname">end_index</tt><em class="property"> = None</em><a class="headerlink" href="#panels.yaml_editor.editorPosition.end_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>X max data node position (by adding or deleting text is changed)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="panels.yaml_editor.editorPosition.end_line">
+<tt class="descname">end_line</tt><em class="property"> = None</em><a class="headerlink" href="#panels.yaml_editor.editorPosition.end_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Y max data node position (by adding or deleting text is changed)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="panels.yaml_editor.editorPosition.fix_bounds">
+<tt class="descname">fix_bounds</tt><big>(</big><em>editor</em><big>)</big><a class="headerlink" href="#panels.yaml_editor.editorPosition.fix_bounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Text is changed, recount bounds</p>
+<p>return:False if recount is unsuccessful, and reload is needed</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="panels.yaml_editor.editorPosition.index">
+<tt class="descname">index</tt><em class="property"> = None</em><a class="headerlink" href="#panels.yaml_editor.editorPosition.index" title="Permalink to this definition">¶</a></dt>
+<dd><p>X cursor position</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="panels.yaml_editor.editorPosition.is_changed">
+<tt class="descname">is_changed</tt><em class="property"> = None</em><a class="headerlink" href="#panels.yaml_editor.editorPosition.is_changed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is node changed</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="panels.yaml_editor.editorPosition.is_key_changed">
+<tt class="descname">is_key_changed</tt><em class="property"> = None</em><a class="headerlink" href="#panels.yaml_editor.editorPosition.is_key_changed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is key changed</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="panels.yaml_editor.editorPosition.is_value_changed">
+<tt class="descname">is_value_changed</tt><em class="property"> = None</em><a class="headerlink" href="#panels.yaml_editor.editorPosition.is_value_changed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is value changed</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="panels.yaml_editor.editorPosition.line">
+<tt class="descname">line</tt><em class="property"> = None</em><a class="headerlink" href="#panels.yaml_editor.editorPosition.line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Y cursor position</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="panels.yaml_editor.editorPosition.make_post_operation">
+<tt class="descname">make_post_operation</tt><big>(</big><em>editor</em>, <em>line</em>, <em>index</em><big>)</big><a class="headerlink" href="#panels.yaml_editor.editorPosition.make_post_operation" title="Permalink to this definition">¶</a></dt>
+<dd><p>complete specion chars after update</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="panels.yaml_editor.editorPosition.new_array_line_completation">
+<tt class="descname">new_array_line_completation</tt><big>(</big><em>editor</em><big>)</big><a class="headerlink" href="#panels.yaml_editor.editorPosition.new_array_line_completation" title="Permalink to this definition">¶</a></dt>
+<dd><p>New line was added</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="panels.yaml_editor.editorPosition.new_pos">
+<tt class="descname">new_pos</tt><big>(</big><em>editor</em>, <em>line</em>, <em>index</em><big>)</big><a class="headerlink" href="#panels.yaml_editor.editorPosition.new_pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update position and return true if isn&#8217;t cursor above node
+or is in inner structure</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="panels.yaml_editor.editorPosition.node">
+<tt class="descname">node</tt><em class="property"> = None</em><a class="headerlink" href="#panels.yaml_editor.editorPosition.node" title="Permalink to this definition">¶</a></dt>
+<dd><p>DataNode item below cursor</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="panels.yaml_editor.editorPosition.node_init">
+<tt class="descname">node_init</tt><big>(</big><em>node</em>, <em>editor</em><big>)</big><a class="headerlink" href="#panels.yaml_editor.editorPosition.node_init" title="Permalink to this definition">¶</a></dt>
+<dd><p>set new node</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="panels.yaml_editor.editorPosition.spec_char_completation">
+<tt class="descname">spec_char_completation</tt><big>(</big><em>editor</em><big>)</big><a class="headerlink" href="#panels.yaml_editor.editorPosition.spec_char_completation" title="Permalink to this definition">¶</a></dt>
+<dd><p>if is added special char, set text for completation else empty string</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-panels">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-panels" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../indexME.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">panels package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-panels.error_tab">panels.error_tab module</a></li>
+<li><a class="reference internal" href="#module-panels.info_panel">panels.info_panel module</a></li>
+<li><a class="reference internal" href="#module-panels.tree">panels.tree module</a></li>
+<li><a class="reference internal" href="#module-panels.yaml_editor">panels.yaml_editor module</a></li>
+<li><a class="reference internal" href="#module-panels">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="model_editor.html"
+                        title="previous chapter">model_editor module</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/aut/ModelEditor/panels.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="model_editor.html" title="model_editor module"
+             >previous</a> |</li>
+        <li><a href="../../indexME.html">Model Editor Source Documentation 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="modules.html" >ModelEditor</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, TUL.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

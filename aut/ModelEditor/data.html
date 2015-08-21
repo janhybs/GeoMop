@@ -1,0 +1,918 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>data package &mdash; Model Editor Source Documentation 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Model Editor Source Documentation 0.0.1 documentation" href="../../index.html" />
+    <link rel="up" title="ModelEditor" href="modules.html" />
+    <link rel="next" title="data.validation package" href="data.validation.html" />
+    <link rel="prev" title="ModelEditor" href="modules.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="data.validation.html" title="data.validation package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="ModelEditor"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../indexME.html">Model Editor Source Documentation 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="modules.html" accesskey="U">ModelEditor</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="data-package">
+<h1>data package<a class="headerlink" href="#data-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data.validation.html">data.validation package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data.validation.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.validation.html#module-data.validation.checks">data.validation.checks module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.validation.html#module-data.validation.errors">data.validation.errors module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.validation.html#module-data.validation.validator">data.validation.validator module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.validation.html#module-data.validation">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data.yaml.html">data.yaml package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data.yaml.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.yaml.html#module-data.yaml.constructor">data.yaml.constructor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.yaml.html#module-data.yaml.loader">data.yaml.loader module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.yaml.html#module-data.yaml.resolver">data.yaml.resolver module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.yaml.html#module-data.yaml.transformator">data.yaml.transformator module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.yaml.html#module-data.yaml">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-data.autoconversion">
+<span id="data-autoconversion-module"></span><h2>data.autoconversion module<a class="headerlink" href="#module-data.autoconversion" title="Permalink to this headline">¶</a></h2>
+<p>GeoMop model auto-conversion module</p>
+<p>Ensures auto-conversion of data for specified format.</p>
+<p>&#64;author: Tomas Krizek</p>
+<dl class="function">
+<dt id="data.autoconversion.autoconvert">
+<tt class="descclassname">data.autoconversion.</tt><tt class="descname">autoconvert</tt><big>(</big><em>node</em>, <em>input_type</em><big>)</big><a class="headerlink" href="#data.autoconversion.autoconvert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs recursive auto-conversion on root node.</p>
+<dl class="docutils">
+<dt>Auto-correction:</dt>
+<dd><ol class="first last arabic simple">
+<li>If Array is expected and scalar/record is found, encapsulate it
+in Array(s).</li>
+<li>If Record is expected and scalar/array is found, check
+reducible_to_key. If present, create the Record.</li>
+<li>If AbstractRecord is expected and scalar/array is found, check if
+default_descendant fits rule 2.</li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-data.data_node">
+<span id="data-data-node-module"></span><h2>data.data_node module<a class="headerlink" href="#module-data.data_node" title="Permalink to this headline">¶</a></h2>
+<p>Data Node package</p>
+<p>Contains classes for representing the tree structure of config files.</p>
+<dl class="class">
+<dt id="data.data_node.ComparableMixin">
+<em class="property">class </em><tt class="descclassname">data.data_node.</tt><tt class="descname">ComparableMixin</tt><a class="headerlink" href="#data.data_node.ComparableMixin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Utility class &#8211; implements other rich comparison operators
+based on &lt; (less than).</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="data.data_node.CompositeNode">
+<em class="property">class </em><tt class="descclassname">data.data_node.</tt><tt class="descname">CompositeNode</tt><big>(</big><em>explicit_keys</em>, <em>key=None</em>, <em>parent=None</em><big>)</big><a class="headerlink" href="#data.data_node.CompositeNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#data.data_node.DataNode" title="data.data_node.DataNode"><tt class="xref py py-class docutils literal"><span class="pre">data.data_node.DataNode</span></tt></a></p>
+<p>Represents a composite node in the tree structure.</p>
+<dl class="attribute">
+<dt id="data.data_node.CompositeNode.children">
+<tt class="descname">children</tt><em class="property"> = None</em><a class="headerlink" href="#data.data_node.CompositeNode.children" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of children nodes</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.data_node.CompositeNode.children_keys">
+<tt class="descname">children_keys</tt><a class="headerlink" href="#data.data_node.CompositeNode.children_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all children keys.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.data_node.CompositeNode.explicit_keys">
+<tt class="descname">explicit_keys</tt><em class="property"> = None</em><a class="headerlink" href="#data.data_node.CompositeNode.explicit_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>boolean; indicates whether keys are specified (record) or
+implicit (array)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.data_node.CompositeNode.get_child">
+<tt class="descname">get_child</tt><big>(</big><em>key</em><big>)</big><a class="headerlink" href="#data.data_node.CompositeNode.get_child" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a child node for the given key; None if key doesn&#8217;t
+exist.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.data_node.CompositeNode.get_node_at_position">
+<tt class="descname">get_node_at_position</tt><big>(</big><em>position</em><big>)</big><a class="headerlink" href="#data.data_node.CompositeNode.get_node_at_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves DataNode at specified position.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.data_node.CompositeNode.set_child">
+<tt class="descname">set_child</tt><big>(</big><em>node</em><big>)</big><a class="headerlink" href="#data.data_node.CompositeNode.set_child" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the specified node as child of this node. If the key already
+exists, the other child node is replaced by this child_node.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.data_node.CompositeNode.type">
+<tt class="descname">type</tt><em class="property"> = None</em><a class="headerlink" href="#data.data_node.CompositeNode.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>specifies the type of AbstractRecord</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="data">
+<dt id="data.data_node.DEBUG_MODE">
+<tt class="descclassname">data.data_node.</tt><tt class="descname">DEBUG_MODE</tt><em class="property"> = True</em><a class="headerlink" href="#data.data_node.DEBUG_MODE" title="Permalink to this definition">¶</a></dt>
+<dd><p>changes the behaviour to debug mode</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="data.data_node.DataError">
+<em class="property">exception </em><tt class="descclassname">data.data_node.</tt><tt class="descname">DataError</tt><big>(</big><em>category</em>, <em>severity</em>, <em>description</em>, <em>span</em>, <em>node=None</em><big>)</big><a class="headerlink" href="#data.data_node.DataError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.Exception</span></tt></p>
+<p>Represents an error that occurs while working with data.</p>
+<dl class="class">
+<dt id="data.data_node.DataError.Category">
+<em class="property">class </em><tt class="descname">Category</tt><a class="headerlink" href="#data.data_node.DataError.Category" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">enum.Enum</span></tt></p>
+<p>Defines the type of an error.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="data.data_node.DataError.Severity">
+<em class="property">class </em><tt class="descclassname">DataError.</tt><tt class="descname">Severity</tt><a class="headerlink" href="#data.data_node.DataError.Severity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">enum.Enum</span></tt></p>
+<p>Severity of an error.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.data_node.DataError.category">
+<tt class="descclassname">DataError.</tt><tt class="descname">category</tt><em class="property"> = None</em><a class="headerlink" href="#data.data_node.DataError.category" title="Permalink to this definition">¶</a></dt>
+<dd><p><tt class="xref py py-class docutils literal"><span class="pre">ErrorCategory</span></tt> the category of error</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.data_node.DataError.description">
+<tt class="descclassname">DataError.</tt><tt class="descname">description</tt><em class="property"> = None</em><a class="headerlink" href="#data.data_node.DataError.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>describes the error</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.data_node.DataError.node">
+<tt class="descclassname">DataError.</tt><tt class="descname">node</tt><em class="property"> = None</em><a class="headerlink" href="#data.data_node.DataError.node" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="#data.data_node.DataNode" title="data.data_node.DataNode"><tt class="xref py py-class docutils literal"><span class="pre">DataNode</span></tt></a> optional; the node where the error occurred</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.data_node.DataError.span">
+<tt class="descclassname">DataError.</tt><tt class="descname">span</tt><em class="property"> = None</em><a class="headerlink" href="#data.data_node.DataError.span" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="#data.data_node.Span" title="data.data_node.Span"><tt class="xref py py-class docutils literal"><span class="pre">Span</span></tt></a> the position of error</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.data_node.DataError.title">
+<tt class="descclassname">DataError.</tt><tt class="descname">title</tt><a class="headerlink" href="#data.data_node.DataError.title" title="Permalink to this definition">¶</a></dt>
+<dd><p>title of the error</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="data.data_node.DataNode">
+<em class="property">class </em><tt class="descclassname">data.data_node.</tt><tt class="descname">DataNode</tt><big>(</big><em>key=None</em>, <em>parent=None</em><big>)</big><a class="headerlink" href="#data.data_node.DataNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Represents a node in the tree structure.</p>
+<p>The complete tree is represented by its root node.</p>
+<dl class="attribute">
+<dt id="data.data_node.DataNode.absolute_path">
+<tt class="descname">absolute_path</tt><a class="headerlink" href="#data.data_node.DataNode.absolute_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>the absolute path to this node</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.data_node.DataNode.anchor">
+<tt class="descname">anchor</tt><em class="property"> = None</em><a class="headerlink" href="#data.data_node.DataNode.anchor" title="Permalink to this definition">¶</a></dt>
+<dd><p>anchor of the node <cite>TextValue</cite></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.data_node.DataNode.end">
+<tt class="descname">end</tt><a class="headerlink" href="#data.data_node.DataNode.end" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the end of this node.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.data_node.DataNode.generate_absolute_path">
+<tt class="descname">generate_absolute_path</tt><big>(</big><em>descendant_path=None</em><big>)</big><a class="headerlink" href="#data.data_node.DataNode.generate_absolute_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>generates absolute path to this node, used recursively</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.data_node.DataNode.get_node_at_path">
+<tt class="descname">get_node_at_path</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#data.data_node.DataNode.get_node_at_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns node at given path</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.data_node.DataNode.get_node_at_position">
+<tt class="descname">get_node_at_position</tt><big>(</big><em>position</em><big>)</big><a class="headerlink" href="#data.data_node.DataNode.get_node_at_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves DataNode at specified position.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.data_node.DataNode.info_text">
+<tt class="descname">info_text</tt><a class="headerlink" href="#data.data_node.DataNode.info_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>help text describing the input type</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.data_node.DataNode.input_type">
+<tt class="descname">input_type</tt><em class="property"> = None</em><a class="headerlink" href="#data.data_node.DataNode.input_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>input type specified by format</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.data_node.DataNode.key">
+<tt class="descname">key</tt><em class="property"> = None</em><a class="headerlink" href="#data.data_node.DataNode.key" title="Permalink to this definition">¶</a></dt>
+<dd><p>key (name) of this node</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.data_node.DataNode.options">
+<tt class="descname">options</tt><a class="headerlink" href="#data.data_node.DataNode.options" title="Permalink to this definition">¶</a></dt>
+<dd><p>possible options to hint in autocomplete</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.data_node.DataNode.parent">
+<tt class="descname">parent</tt><em class="property"> = None</em><a class="headerlink" href="#data.data_node.DataNode.parent" title="Permalink to this definition">¶</a></dt>
+<dd><p>parent node</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.data_node.DataNode.ref">
+<tt class="descname">ref</tt><em class="property"> = None</em><a class="headerlink" href="#data.data_node.DataNode.ref" title="Permalink to this definition">¶</a></dt>
+<dd><p>reference to another node</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.data_node.DataNode.span">
+<tt class="descname">span</tt><em class="property"> = None</em><a class="headerlink" href="#data.data_node.DataNode.span" title="Permalink to this definition">¶</a></dt>
+<dd><p>borders the position of this node in input text</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.data_node.DataNode.start">
+<tt class="descname">start</tt><a class="headerlink" href="#data.data_node.DataNode.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>start of node, including its key</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="data.data_node.Position">
+<em class="property">class </em><tt class="descclassname">data.data_node.</tt><tt class="descname">Position</tt><big>(</big><em>line=None</em>, <em>column=None</em><big>)</big><a class="headerlink" href="#data.data_node.Position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#data.data_node.ComparableMixin" title="data.data_node.ComparableMixin"><tt class="xref py py-class docutils literal"><span class="pre">data.data_node.ComparableMixin</span></tt></a></p>
+<p>Marks a cursor position in text.</p>
+<dl class="attribute">
+<dt id="data.data_node.Position.column">
+<tt class="descname">column</tt><em class="property"> = None</em><a class="headerlink" href="#data.data_node.Position.column" title="Permalink to this definition">¶</a></dt>
+<dd><p>column number; starts from 1</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="data.data_node.Position.from_document_end">
+<em class="property">static </em><tt class="descname">from_document_end</tt><big>(</big><em>document</em><big>)</big><a class="headerlink" href="#data.data_node.Position.from_document_end" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the last <cite>Position</cite> in the document.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="data.data_node.Position.from_mark">
+<em class="property">static </em><tt class="descname">from_mark</tt><big>(</big><em>mark</em><big>)</big><a class="headerlink" href="#data.data_node.Position.from_mark" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a <cite>Position</cite> from YAML mark.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="data.data_node.Position.from_yaml_error">
+<em class="property">static </em><tt class="descname">from_yaml_error</tt><big>(</big><em>yaml_error</em><big>)</big><a class="headerlink" href="#data.data_node.Position.from_yaml_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a <cite>Position</cite> from <cite>MarkedYAMLError</cite>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.data_node.Position.line">
+<tt class="descname">line</tt><em class="property"> = None</em><a class="headerlink" href="#data.data_node.Position.line" title="Permalink to this definition">¶</a></dt>
+<dd><p>line number; starts from 1</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="data.data_node.ScalarNode">
+<em class="property">class </em><tt class="descclassname">data.data_node.</tt><tt class="descname">ScalarNode</tt><big>(</big><em>key=None</em>, <em>parent=None</em>, <em>value=None</em><big>)</big><a class="headerlink" href="#data.data_node.ScalarNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#data.data_node.DataNode" title="data.data_node.DataNode"><tt class="xref py py-class docutils literal"><span class="pre">data.data_node.DataNode</span></tt></a></p>
+<p>Represents a scalar node in the tree structure.</p>
+<dl class="method">
+<dt id="data.data_node.ScalarNode.get_node_at_position">
+<tt class="descname">get_node_at_position</tt><big>(</big><em>position</em><big>)</big><a class="headerlink" href="#data.data_node.ScalarNode.get_node_at_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves DataNode at specified position.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.data_node.ScalarNode.value">
+<tt class="descname">value</tt><em class="property"> = None</em><a class="headerlink" href="#data.data_node.ScalarNode.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>the scalar value</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="data.data_node.Span">
+<em class="property">class </em><tt class="descclassname">data.data_node.</tt><tt class="descname">Span</tt><big>(</big><em>start=None</em>, <em>end=None</em><big>)</big><a class="headerlink" href="#data.data_node.Span" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Borders a part of text.</p>
+<dl class="attribute">
+<dt id="data.data_node.Span.end">
+<tt class="descname">end</tt><em class="property"> = None</em><a class="headerlink" href="#data.data_node.Span.end" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="#data.data_node.Position" title="data.data_node.Position"><tt class="xref py py-class docutils literal"><span class="pre">Position</span></tt></a> indicates the end of the section; exclusive</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="data.data_node.Span.from_event">
+<em class="property">static </em><tt class="descname">from_event</tt><big>(</big><em>event</em><big>)</big><a class="headerlink" href="#data.data_node.Span.from_event" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs <cite>Span</cite> from YAML <cite>event</cite>.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="data.data_node.Span.from_marks">
+<em class="property">static </em><tt class="descname">from_marks</tt><big>(</big><em>start_mark</em>, <em>end_mark</em><big>)</big><a class="headerlink" href="#data.data_node.Span.from_marks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs <cite>Span</cite> from YAML marks.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.data_node.Span.start">
+<tt class="descname">start</tt><em class="property"> = None</em><a class="headerlink" href="#data.data_node.Span.start" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="#data.data_node.Position" title="data.data_node.Position"><tt class="xref py py-class docutils literal"><span class="pre">Position</span></tt></a> indicates the start of the section; inclusive</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="data.data_node.TextValue">
+<em class="property">class </em><tt class="descclassname">data.data_node.</tt><tt class="descname">TextValue</tt><big>(</big><em>value=None</em><big>)</big><a class="headerlink" href="#data.data_node.TextValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Represents a value in the input text.</p>
+<dl class="attribute">
+<dt id="data.data_node.TextValue.span">
+<tt class="descname">span</tt><em class="property"> = None</em><a class="headerlink" href="#data.data_node.TextValue.span" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="#data.data_node.Span" title="data.data_node.Span"><tt class="xref py py-class docutils literal"><span class="pre">Span</span></tt></a> specifies the position of value in input text</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.data_node.TextValue.value">
+<tt class="descname">value</tt><em class="property"> = None</em><a class="headerlink" href="#data.data_node.TextValue.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>the value from input text</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-data.error_handler">
+<span id="data-error-handler-module"></span><h2>data.error_handler module<a class="headerlink" href="#module-data.error_handler" title="Permalink to this headline">¶</a></h2>
+<p>Error Handler module for capturing and reporting errors
+that occur when processing the data structure.</p>
+<p>Author: Tomas Krizek</p>
+<dl class="class">
+<dt id="data.error_handler.ErrorHandler">
+<em class="property">class </em><tt class="descclassname">data.error_handler.</tt><tt class="descname">ErrorHandler</tt><a class="headerlink" href="#data.error_handler.ErrorHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Handles errors that can occur during parsing, loading or validation
+of data structure.</p>
+<dl class="attribute">
+<dt id="data.error_handler.ErrorHandler.VALIDATION_SEVERITIES">
+<tt class="descname">VALIDATION_SEVERITIES</tt><em class="property"> = {&lt;class 'data.validation.errors.ValidationTypeError'&gt;: &lt;Severity.error: 2&gt;, &lt;class 'data.validation.errors.NotEnoughItems'&gt;: &lt;Severity.error: 2&gt;, &lt;class 'data.validation.errors.ValueTooSmall'&gt;: &lt;Severity.error: 2&gt;, &lt;class 'data.validation.errors.TooManyItems'&gt;: &lt;Severity.error: 2&gt;, &lt;class 'data.validation.errors.MissingAbstractRecordType'&gt;: &lt;Severity.error: 2&gt;, &lt;class 'data.validation.errors.InvalidOption'&gt;: &lt;Severity.error: 2&gt;, &lt;class 'data.validation.errors.InvalidAbstractRecordType'&gt;: &lt;Severity.error: 2&gt;, &lt;class 'data.validation.errors.ValueTooBig'&gt;: &lt;Severity.error: 2&gt;, &lt;class 'data.validation.errors.ValidationError'&gt;: &lt;Severity.error: 2&gt;, &lt;class 'data.validation.errors.MissingKey'&gt;: &lt;Severity.error: 2&gt;, &lt;class 'data.validation.errors.UnknownKey'&gt;: &lt;Severity.warning: 1&gt;}</em><a class="headerlink" href="#data.error_handler.ErrorHandler.VALIDATION_SEVERITIES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="data.error_handler.ErrorHandler.clear">
+<tt class="descname">clear</tt><big>(</big><big>)</big><a class="headerlink" href="#data.error_handler.ErrorHandler.clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>clears the error buffer</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.error_handler.ErrorHandler.errors">
+<tt class="descname">errors</tt><a class="headerlink" href="#data.error_handler.ErrorHandler.errors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sorted array of errors.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.error_handler.ErrorHandler.report_anchor_override">
+<tt class="descname">report_anchor_override</tt><big>(</big><em>anchor</em>, <em>node</em><big>)</big><a class="headerlink" href="#data.error_handler.ErrorHandler.report_anchor_override" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports a duplicate anchor.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.error_handler.ErrorHandler.report_construct_scalar_error">
+<tt class="descname">report_construct_scalar_error</tt><big>(</big><em>node</em>, <em>description</em><big>)</big><a class="headerlink" href="#data.error_handler.ErrorHandler.report_construct_scalar_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports scalar node construction error.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.error_handler.ErrorHandler.report_invalid_mapping_key">
+<tt class="descname">report_invalid_mapping_key</tt><big>(</big><em>span</em><big>)</big><a class="headerlink" href="#data.error_handler.ErrorHandler.report_invalid_mapping_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports an invalid (non-scalar) key for mapping.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.error_handler.ErrorHandler.report_invalid_merge_type">
+<tt class="descname">report_invalid_merge_type</tt><big>(</big><em>span</em><big>)</big><a class="headerlink" href="#data.error_handler.ErrorHandler.report_invalid_merge_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports invalid merge type.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.error_handler.ErrorHandler.report_invalid_reference_error">
+<tt class="descname">report_invalid_reference_error</tt><big>(</big><em>node</em><big>)</big><a class="headerlink" href="#data.error_handler.ErrorHandler.report_invalid_reference_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>reports an invalid reference path</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.error_handler.ErrorHandler.report_invalid_tag_position">
+<tt class="descname">report_invalid_tag_position</tt><big>(</big><em>tag</em><big>)</big><a class="headerlink" href="#data.error_handler.ErrorHandler.report_invalid_tag_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports an invalid tag position error.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.error_handler.ErrorHandler.report_merge_error">
+<tt class="descname">report_merge_error</tt><big>(</big><em>span</em><big>)</big><a class="headerlink" href="#data.error_handler.ErrorHandler.report_merge_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports a merge error.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.error_handler.ErrorHandler.report_modification_ignored">
+<tt class="descname">report_modification_ignored</tt><big>(</big><em>start_line</em>, <em>end_line</em><big>)</big><a class="headerlink" href="#data.error_handler.ErrorHandler.report_modification_ignored" title="Permalink to this definition">¶</a></dt>
+<dd><p>reports that modification of certain lines has been ignored</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.error_handler.ErrorHandler.report_multi_reference_error">
+<tt class="descname">report_multi_reference_error</tt><big>(</big><em>node</em><big>)</big><a class="headerlink" href="#data.error_handler.ErrorHandler.report_multi_reference_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>reports a multi-level reference error</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.error_handler.ErrorHandler.report_parsing_error">
+<tt class="descname">report_parsing_error</tt><big>(</big><em>yaml_error</em>, <em>error_end_pos</em><big>)</big><a class="headerlink" href="#data.error_handler.ErrorHandler.report_parsing_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>reports a YAML error that occurs during parsing</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.error_handler.ErrorHandler.report_undefined_anchor">
+<tt class="descname">report_undefined_anchor</tt><big>(</big><em>anchor</em><big>)</big><a class="headerlink" href="#data.error_handler.ErrorHandler.report_undefined_anchor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports an undefined anchor used in alias.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.error_handler.ErrorHandler.report_validation_error">
+<tt class="descname">report_validation_error</tt><big>(</big><em>node</em>, <em>error</em><big>)</big><a class="headerlink" href="#data.error_handler.ErrorHandler.report_validation_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>reports an error that occurs during validation
+returns True when severity is error or greater, False otherwise</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="data.error_handler.get_validation_error_span">
+<tt class="descclassname">data.error_handler.</tt><tt class="descname">get_validation_error_span</tt><big>(</big><em>node</em>, <em>error</em><big>)</big><a class="headerlink" href="#data.error_handler.get_validation_error_span" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines the correct position of a validation error.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-data.format">
+<span id="data-format-module"></span><h2>data.format module<a class="headerlink" href="#module-data.format" title="Permalink to this headline">¶</a></h2>
+<p>Contains format specification class and methods to parse it from JSON.</p>
+<p>&#64;author: Tomas Krizek</p>
+<dl class="function">
+<dt id="data.format.get_root_input_type_from_json">
+<tt class="descclassname">data.format.</tt><tt class="descname">get_root_input_type_from_json</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="#data.format.get_root_input_type_from_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the root input type from JSON formatted data.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="data.format.parse_format">
+<tt class="descclassname">data.format.</tt><tt class="descname">parse_format</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="#data.format.parse_format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns root input type from JSON data.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-data.import_json">
+<span id="data-import-json-module"></span><h2>data.import_json module<a class="headerlink" href="#module-data.import_json" title="Permalink to this headline">¶</a></h2>
+<p>GeomMop configuration file parsers</p>
+<p>This file contains the parsing functions for configuration files of Flow123d.
+Currently supports .con format (as specified by Flow123d manual v1.8.2).</p>
+<dl class="class">
+<dt id="data.import_json.Comment">
+<em class="property">class </em><tt class="descclassname">data.import_json.</tt><tt class="descname">Comment</tt><big>(</big><em>path</em>, <em>text</em>, <em>after=False</em><big>)</big><a class="headerlink" href="#data.import_json.Comment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Class for one comment</p>
+<dl class="attribute">
+<dt id="data.import_json.Comment.after">
+<tt class="descname">after</tt><em class="property"> = None</em><a class="headerlink" href="#data.import_json.Comment.after" title="Permalink to this definition">¶</a></dt>
+<dd><p>comment after key (else above key)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.import_json.Comment.pos">
+<tt class="descname">pos</tt><em class="property"> = None</em><a class="headerlink" href="#data.import_json.Comment.pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>possition in associated file</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.import_json.Comment.rows">
+<tt class="descname">rows</tt><em class="property"> = None</em><a class="headerlink" href="#data.import_json.Comment.rows" title="Permalink to this definition">¶</a></dt>
+<dd><p>Array of comments</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.import_json.Comment.set_yaml_position">
+<tt class="descname">set_yaml_position</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="#data.import_json.Comment.set_yaml_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>set possition in yaml file</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="data.import_json.Comments">
+<em class="property">class </em><tt class="descclassname">data.import_json.</tt><tt class="descname">Comments</tt><a class="headerlink" href="#data.import_json.Comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Class for comments processed</p>
+<dl class="class">
+<dt id="data.import_json.Comments.BlokType">
+<em class="property">class </em><tt class="descname">BlokType</tt><a class="headerlink" href="#data.import_json.Comments.BlokType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">enum.Enum</span></tt></p>
+<p>Type of block</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.import_json.Comments.comments">
+<tt class="descclassname">Comments.</tt><tt class="descname">comments</tt><em class="property"> = None</em><a class="headerlink" href="#data.import_json.Comments.comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>array of comments</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.import_json.Comments.read_comments_from_con">
+<tt class="descclassname">Comments.</tt><tt class="descname">read_comments_from_con</tt><big>(</big><em>text</em>, <em>data</em><big>)</big><a class="headerlink" href="#data.import_json.Comments.read_comments_from_con" title="Permalink to this definition">¶</a></dt>
+<dd><p>reread comments from con file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.import_json.Comments.sorte_by_yaml">
+<tt class="descclassname">Comments.</tt><tt class="descname">sorte_by_yaml</tt><big>(</big><em>yaml</em>, <em>data</em><big>)</big><a class="headerlink" href="#data.import_json.Comments.sorte_by_yaml" title="Permalink to this definition">¶</a></dt>
+<dd><p>sorte comments by possition in yaml file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.import_json.Comments.write_to_yaml">
+<tt class="descclassname">Comments.</tt><tt class="descname">write_to_yaml</tt><big>(</big><em>yaml</em><big>)</big><a class="headerlink" href="#data.import_json.Comments.write_to_yaml" title="Permalink to this definition">¶</a></dt>
+<dd><p>return yaml text with comments</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="data.import_json.fix_tags">
+<tt class="descclassname">data.import_json.</tt><tt class="descname">fix_tags</tt><big>(</big><em>yaml</em>, <em>root</em><big>)</big><a class="headerlink" href="#data.import_json.fix_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replase TYPE and refferences by tags</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="data.import_json.parse_con">
+<tt class="descclassname">data.import_json.</tt><tt class="descname">parse_con</tt><big>(</big><em>con</em><big>)</big><a class="headerlink" href="#data.import_json.parse_con" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses a configuration file of Flow123d in .con format with given filename.</p>
+<p>Returns the yaml text structure.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="data.import_json.rewrite_comments">
+<tt class="descclassname">data.import_json.</tt><tt class="descname">rewrite_comments</tt><big>(</big><em>con</em>, <em>yaml</em>, <em>data</em><big>)</big><a class="headerlink" href="#data.import_json.rewrite_comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read comments from text (con file) and place it to yaml structure</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-data.meconfig">
+<span id="data-meconfig-module"></span><h2>data.meconfig module<a class="headerlink" href="#module-data.meconfig" title="Permalink to this headline">¶</a></h2>
+<p>Model dialog static parameters</p>
+<dl class="class">
+<dt id="data.meconfig.MEConfig">
+<em class="property">class </em><tt class="descclassname">data.meconfig.</tt><tt class="descname">MEConfig</tt><a class="headerlink" href="#data.meconfig.MEConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Static data class</p>
+<dl class="attribute">
+<dt id="data.meconfig.MEConfig.changed">
+<tt class="descname">changed</tt><em class="property"> = False</em><a class="headerlink" href="#data.meconfig.MEConfig.changed" title="Permalink to this definition">¶</a></dt>
+<dd><p>is file changed</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.meconfig.MEConfig.config">
+<tt class="descname">config</tt><em class="property"> = &lt;data.meconfig._Config object at 0x2b8a2cb1d2b0&gt;</em><a class="headerlink" href="#data.meconfig.MEConfig.config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Serialized variables</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.meconfig.MEConfig.curr_file">
+<tt class="descname">curr_file</tt><em class="property"> = None</em><a class="headerlink" href="#data.meconfig.MEConfig.curr_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Serialized variables</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.meconfig.MEConfig.curr_format_file">
+<tt class="descname">curr_format_file</tt><em class="property"> = None</em><a class="headerlink" href="#data.meconfig.MEConfig.curr_format_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>selected format file</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.meconfig.MEConfig.document">
+<tt class="descname">document</tt><em class="property"> = ''</em><a class="headerlink" href="#data.meconfig.MEConfig.document" title="Permalink to this definition">¶</a></dt>
+<dd><p>text set by editor after significant changing</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.meconfig.MEConfig.error_handler">
+<tt class="descname">error_handler</tt><em class="property"> = &lt;data.error_handler.ErrorHandler object at 0x2b8a2caeb8d0&gt;</em><a class="headerlink" href="#data.meconfig.MEConfig.error_handler" title="Permalink to this definition">¶</a></dt>
+<dd><p>error handler for reporting and buffering errors</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.meconfig.MEConfig.errors">
+<tt class="descname">errors</tt><em class="property"> = []</em><a class="headerlink" href="#data.meconfig.MEConfig.errors" title="Permalink to this definition">¶</a></dt>
+<dd><p>array of validation errors</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.meconfig.MEConfig.format_files">
+<tt class="descname">format_files</tt><em class="property"> = []</em><a class="headerlink" href="#data.meconfig.MEConfig.format_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Array of format files</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="data.meconfig.MEConfig.get_curr_format_text">
+<em class="property">classmethod </em><tt class="descname">get_curr_format_text</tt><big>(</big><big>)</big><a class="headerlink" href="#data.meconfig.MEConfig.get_curr_format_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>return current format file text</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="data.meconfig.MEConfig.get_data_node">
+<em class="property">classmethod </em><tt class="descname">get_data_node</tt><big>(</big><em>position</em><big>)</big><a class="headerlink" href="#data.meconfig.MEConfig.get_data_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns DataNode at given <cite>class::Position</cite> position.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="data.meconfig.MEConfig.get_transformation_text">
+<em class="property">classmethod </em><tt class="descname">get_transformation_text</tt><big>(</big><em>file</em><big>)</big><a class="headerlink" href="#data.meconfig.MEConfig.get_transformation_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>return transformation file text</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="data.meconfig.MEConfig.import_file">
+<em class="property">classmethod </em><tt class="descname">import_file</tt><big>(</big><em>file_name</em><big>)</big><a class="headerlink" href="#data.meconfig.MEConfig.import_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>read con file and transform it to yaml structure</p>
+<p>return: if file have good format (boolean)</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="data.meconfig.MEConfig.init">
+<em class="property">classmethod </em><tt class="descname">init</tt><big>(</big><em>main_window</em><big>)</big><a class="headerlink" href="#data.meconfig.MEConfig.init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Init class wit static method</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.meconfig.MEConfig.loader">
+<tt class="descname">loader</tt><em class="property"> = &lt;data.yaml.loader.Loader object at 0x2b8a2cb1d2e8&gt;</em><a class="headerlink" href="#data.meconfig.MEConfig.loader" title="Permalink to this definition">¶</a></dt>
+<dd><p>loader of YAML files</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.meconfig.MEConfig.main_window">
+<tt class="descname">main_window</tt><em class="property"> = None</em><a class="headerlink" href="#data.meconfig.MEConfig.main_window" title="Permalink to this definition">¶</a></dt>
+<dd><p>parent of dialogs</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="data.meconfig.MEConfig.new_file">
+<em class="property">classmethod </em><tt class="descname">new_file</tt><big>(</big><big>)</big><a class="headerlink" href="#data.meconfig.MEConfig.new_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>empty file</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="data.meconfig.MEConfig.open_file">
+<em class="property">classmethod </em><tt class="descname">open_file</tt><big>(</big><em>file_name</em><big>)</big><a class="headerlink" href="#data.meconfig.MEConfig.open_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>read file</p>
+<p>return: if file have good format (boolean)</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="data.meconfig.MEConfig.open_recent_file">
+<em class="property">classmethod </em><tt class="descname">open_recent_file</tt><big>(</big><em>file_name</em><big>)</big><a class="headerlink" href="#data.meconfig.MEConfig.open_recent_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>read file from recent files</p>
+<p>return: if file have good format (boolean)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.meconfig.MEConfig.root">
+<tt class="descname">root</tt><em class="property"> = None</em><a class="headerlink" href="#data.meconfig.MEConfig.root" title="Permalink to this definition">¶</a></dt>
+<dd><p>root DataNode structure</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.meconfig.MEConfig.root_input_type">
+<tt class="descname">root_input_type</tt><em class="property"> = None</em><a class="headerlink" href="#data.meconfig.MEConfig.root_input_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>input type of the whole tree, parsed from format</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="data.meconfig.MEConfig.save_as">
+<em class="property">classmethod </em><tt class="descname">save_as</tt><big>(</big><em>file_name</em><big>)</big><a class="headerlink" href="#data.meconfig.MEConfig.save_as" title="Permalink to this definition">¶</a></dt>
+<dd><p>save file as</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="data.meconfig.MEConfig.save_file">
+<em class="property">classmethod </em><tt class="descname">save_file</tt><big>(</big><big>)</big><a class="headerlink" href="#data.meconfig.MEConfig.save_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>save file</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="data.meconfig.MEConfig.set_current_format_file">
+<em class="property">classmethod </em><tt class="descname">set_current_format_file</tt><big>(</big><em>file_name</em><big>)</big><a class="headerlink" href="#data.meconfig.MEConfig.set_current_format_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>set current format file</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="data.meconfig.MEConfig.transform">
+<em class="property">classmethod </em><tt class="descname">transform</tt><big>(</big><em>file</em><big>)</big><a class="headerlink" href="#data.meconfig.MEConfig.transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run transformation accoding rules in set file</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.meconfig.MEConfig.transformation_files">
+<tt class="descname">transformation_files</tt><em class="property"> = []</em><a class="headerlink" href="#data.meconfig.MEConfig.transformation_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Array of transformation files</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="data.meconfig.MEConfig.update">
+<em class="property">classmethod </em><tt class="descname">update</tt><big>(</big><big>)</big><a class="headerlink" href="#data.meconfig.MEConfig.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>reread yaml text and update node tree</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="data.meconfig.MEConfig.update_format">
+<em class="property">classmethod </em><tt class="descname">update_format</tt><big>(</big><big>)</big><a class="headerlink" href="#data.meconfig.MEConfig.update_format" title="Permalink to this definition">¶</a></dt>
+<dd><p>reread json format file and update node tree</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="data.meconfig.MEConfig.update_yaml_file">
+<em class="property">classmethod </em><tt class="descname">update_yaml_file</tt><big>(</big><em>new_yaml_text</em><big>)</big><a class="headerlink" href="#data.meconfig.MEConfig.update_yaml_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>update new editor text</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.meconfig.MEConfig.validator">
+<tt class="descname">validator</tt><em class="property"> = &lt;data.validation.validator.Validator object at 0x2b8a34e18fd0&gt;</em><a class="headerlink" href="#data.meconfig.MEConfig.validator" title="Permalink to this definition">¶</a></dt>
+<dd><p>data validator</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-data">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-data" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../indexME.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">data package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-data.autoconversion">data.autoconversion module</a></li>
+<li><a class="reference internal" href="#module-data.data_node">data.data_node module</a></li>
+<li><a class="reference internal" href="#module-data.error_handler">data.error_handler module</a></li>
+<li><a class="reference internal" href="#module-data.format">data.format module</a></li>
+<li><a class="reference internal" href="#module-data.import_json">data.import_json module</a></li>
+<li><a class="reference internal" href="#module-data.meconfig">data.meconfig module</a></li>
+<li><a class="reference internal" href="#module-data">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="modules.html"
+                        title="previous chapter">ModelEditor</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="data.validation.html"
+                        title="next chapter">data.validation package</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/aut/ModelEditor/data.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="data.validation.html" title="data.validation package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="ModelEditor"
+             >previous</a> |</li>
+        <li><a href="../../indexME.html">Model Editor Source Documentation 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="modules.html" >ModelEditor</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, TUL.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

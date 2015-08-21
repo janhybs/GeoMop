@@ -1,0 +1,30 @@
+communication package
+=====================
+
+Submodules
+----------
+
+communication.communication module
+----------------------------------
+
+.. automodule:: communication.communication
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+communication.communicator module
+---------------------------------
+
+.. automodule:: communication.communicator
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: communication
+    :members:
+    :undoc-members:
+    :show-inheritance:
