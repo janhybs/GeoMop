@@ -57,12 +57,12 @@ class InfoTextGenerator:
         html_head = htmltree('head')
         html_head.style('css/main.css')
         html_head.style('css/bootstrap.min.css')
-        html_head.style('css/katex.min.css')
 
         html_head.script('js/jquery-2.1.3.min.js')
         html_head.script('js/bootstrap.min.js')
-        html_body.script('js/katex.min.js')
-        html_body.script('js/main.js')
+        html_head.tag('script', "MathJax.Hub.Config({tex2jax: {inlineMath: [['{$','$}']]}});",
+                      attrib={}, type='text/x-mathjax-config')
+        html_head.script('MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML')
 
         html.add(html_head.current())
         html.add(html_body.current())
