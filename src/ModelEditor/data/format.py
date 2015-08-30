@@ -60,9 +60,10 @@ class InfoTextGenerator:
 
         html_head.script('js/jquery-2.1.3.min.js')
         html_head.script('js/bootstrap.min.js')
-        html_head.tag('script', "MathJax.Hub.Config({tex2jax: {inlineMath: [['{$','$}']]}});",
+        html_body.tag('script', """MathJax.Hub.Config({tex2jax: {inlineMath: [['{$','$}']]}, messageStyle: "none"
+        });""",
                       attrib={}, type='text/x-mathjax-config')
-        html_head.script('MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML')
+        html_body.script('MathJax/MathJax.js?config=TeX-AMS-MML_SVG-full')
 
         html.add(html_head.current())
         html.add(html_body.current())
