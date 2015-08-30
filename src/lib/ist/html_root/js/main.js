@@ -30,6 +30,7 @@ $(document).ready(function() {
     if (code.endsWith('$}'))
       code = code.substring (0, code.length - 2);
 
-    katex.render (code, element, { displayMode: false });
+    element.innerHTML = '$$' + code + '$$';
+//    katex.render (code, element, { displayMode: false });
   });
 });

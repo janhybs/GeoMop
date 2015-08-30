@@ -35,17 +35,17 @@ if __name__ == '__main__':
     from PyQt5.QtCore import QTimer
 
     app = QApplication(sys.argv)
-    url = QUrl.fromLocalFile(__html_root_path__ + 'katex_example.html')
+    url = QUrl.fromLocalFile(__html_root_path__ + 'mathjax_example.html')
     win = InfoPanelWidget()
     win.setUrl(url)
     win.show()
 
     # for debugging purposes
-    # def refreshPage():
-    #     win.setUrl(url)
-    #
-    # timer = QTimer(win)
-    # timer.timeout.connect(refreshPage)
-    # timer.start(5000)
+    def refreshPage():
+        win.setUrl(url)
+
+    timer = QTimer(win)
+    timer.timeout.connect(refreshPage)
+    timer.start(2000)
 
     sys.exit(app.exec_())
