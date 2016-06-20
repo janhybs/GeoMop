@@ -178,22 +178,31 @@ _NOTIFICATIONS = [
         'code': 453,
         'name': 'DifferentArrayLengthForTransposition',
         'description': 'The arrays to be transposed are of different lengths.',
-        'message': 'Arrays to be transposed are of different length.',
+        'message': 'Arrays to be transposed are of different length',
         'example': 'example_transposition.yaml',
     },
     {
+        # deprecated, not used any more
         'code': 454,
         'name': 'InvalidAbstractTranspositionLen',
-        'description': 'Transposition of Abstract can have only parameters width same len.',
+        'description': 'DEPRECATED',
         'message': 'Transposed abstract incorrect len parameter',
-        'example': '', 
+        'example': '',
     },
     {
+        # deprecated, not used any more
         'code': 455,
         'name': 'InvalidAbstractTranspositionParameterType',
-        'description': 'Transposition of Abstract can have only parameters of array type.',
+        'description': 'DEPRECATED',
         'message': 'Transposed abstract  parameter type is not array',
-        'example': '', 
+        'example': '',
+    },
+    {
+        'code': 456,
+        'name': 'InvalidTranspositionAbstractRecordType',
+        'description': 'When YAML tag is not among possible implementations during transposition.',
+        'message': 'Undefined Abstract type, cannot perform transposition.',
+        'example': '',
     },
 
     # -----------------------------------------------------

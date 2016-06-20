@@ -241,13 +241,23 @@ class Transposer:
         if node.implementation == DataNode.Implementation.scalar:
             return cls._expand_value_to_array(node)
 
-        # verify that subtype is record
         subtype = input_type['subtype']
-        if subtype['base_type'] != 'Record' and \
-           ( subtype['base_type'] != 'Abstract' or \
-              not hasattr(node, 'type') or \
-              node.type.value not in input_type['subtype']['implementations']
-           ):
+
+        # handle abstract record type selection
+        if subtype['base_type'] == 'Abstract':
+            if hasattr(node, 'type') and node.type is not None and \
+                    node.type.value in subtype['implementations']:
+                subtype = subtype['implementations'][node.type.value]
+            elif hasattr(subtype, 'default_descendant'):
+                subtype = subtype['default_descendant']
+            else:
+                notification = Notification.from_name('InvalidTranspositionAbstractRecordType')
+                notification.span = node.span
+                notification_handler.report(notification)
+                return node
+
+        # verify that subtype is record
+        if subtype['base_type'] != 'Record':
             notification = Notification.from_name('UnsupportedTransposition',
                                                             input_type['base_type'])
             notification.span = node.span
@@ -296,57 +306,36 @@ class Transposer:
         return array_node
 
     @classmethod
-    def _get_transformation_array_size(cls, node, input_type):
-        """Return transformation array size."""
-        if  input_type['base_type'] == 'Abstract':
-            if node.implementation == DataNode.Implementation.sequence:
-                notification = Notification.from_name("InvalidAbstractTranspositionParameterType")
-                notification.span = node.span
-                raise notification
-            cls.array_size = 1000000
-            isset = False
-            for child in node.children:
-                if len(child.children)<cls.array_size:
-                    cls.array_size = len(child.children)
-                    isset = True
-            if not  isset:
-                cls.array_size = 0
-            for child in node.children:
-                if len(child.children)!=cls.array_size:
-                    notification = Notification.from_name("InvalidAbstractTranspositionLen")
+    def _get_transformation_array_size(cls, node, input_type, noconvert=False):
+        # find a children node that has an array instead of record or scalar
+        for child in node.children:
+            # the key is not specified in input type
+            if 'keys' not in input_type or child.key.value not in input_type['keys']:
+                continue
+
+            child_type = input_type['keys'][child.key.value]['type']
+
+            if child.implementation == DataNode.Implementation.sequence:
+                if child_type['base_type'] == 'Record':
+                    notification = Notification.from_name("InvalidTransposition")
                     notification.span = child.span
                     raise notification
-                cls.paths_to_convert.append('/'.join(cls.current_path + [child.key.value]))
-        else:
-            # find a children node that has an array instead of record or scalar
-            for child in node.children:
-                # the key is not specified in input type
-                if 'keys' not in input_type or child.key.value not in input_type['keys']:
-                    continue
-
-                child_type = input_type['keys'][child.key.value]['type']
-
-                if child.implementation == DataNode.Implementation.sequence:
-                    if child_type['base_type'] == 'Record':
-                        notification = Notification.from_name("InvalidTransposition")
+                elif child_type['base_type'] != 'Array':
+                    if cls.array_size is None:
+                        cls.array_size = len(child.children)
+                        cls.paths_to_convert.append('/'.join(cls.current_path + [child.key.value]))
+                    elif cls.array_size != len(child.children):
+                        notification = Notification.from_name(
+                            "DifferentArrayLengthForTransposition")
                         notification.span = child.span
                         raise notification
-                    elif child_type['base_type'] != 'Array':
-                        if cls.array_size is None:
-                            cls.array_size = len(child.children)
-                            cls.paths_to_convert.append('/'.join(cls.current_path + [child.key.value]))
-                        elif cls.array_size != len(child.children):
-                            notification = Notification.from_name(
-                                "DifferentArrayLengthForTransposition")
-                            notification.span = child.span
-                            raise notification
-                        else:
-                            cls.paths_to_convert.append('/'.join(cls.current_path + [child.key.value]))
+                    else:
+                        cls.paths_to_convert.append('/'.join(cls.current_path + [child.key.value]))
 
-                # verify array size recursively
-                cls.current_path.append(child.key.value)
-                cls._get_transformation_array_size(child, child_type)
-                cls.current_path.pop()
+            # verify array size recursively
+            cls.current_path.append(child.key.value)
+
+            cls.current_path.pop()
 
         return cls.array_size
 
