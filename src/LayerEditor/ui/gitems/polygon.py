@@ -18,10 +18,17 @@ class Polygon(QtWidgets.QGraphicsPolygonItem):
         self.color = polygon.get_color()
         self.depth = polygon.depth
         
-        brush = QtGui.QBrush(QtGui.QColor(self.color))
+        #brush = QtGui.QBrush(QtGui.QColor(self.color))
+        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0), QtCore.Qt.BDiagPattern)
         self.setBrush(brush)
-        self.setZValue(self.MIN_ZVALUE+self.depth) 
-        
+        self.setZValue(self.MIN_ZVALUE+self.depth)
+
+    def paint(self, painter, option, widget):
+        brush = self.brush()
+        brush.setTransform(painter.worldTransform().inverted()[0] * QtGui.QTransform.fromScale(1, 1))
+        self.setBrush(brush)
+        super().paint(painter, option, widget)
+
     def update_color(self):
         color = self.polygon.get_color()
         if self.color != color:
